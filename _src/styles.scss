@@ -1,0 +1,13 @@
+$beige: #dadbb6;
+$brown: #4d3e25;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $beige;
+  color: $brown;
+}
