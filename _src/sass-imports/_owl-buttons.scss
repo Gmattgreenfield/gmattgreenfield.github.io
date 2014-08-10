@@ -1,0 +1,51 @@
+@mixin triangle($width, $dir, $color) {
+    width: 0;
+    height: 0;
+  @if $dir == up {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $width/2 solid $color;
+  } @else if $dir == down {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $width/2 solid $color;
+  } @else if $dir == right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  } @else if $dir == left {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+}
+
+.owl-prev {
+  @include triangle(30px, left, black);
+  left: -40px;
+  &:after {
+    @include triangle(20px, left, white);
+    top: -20px;
+    right: -27px;
+  }
+}
+.owl-next {
+  @include triangle(30px, right, black);
+  right: -40px;
+  &:after {
+    @include triangle(20px, right, white);
+    top: -20px;
+    left: -26px;
+  }
+}

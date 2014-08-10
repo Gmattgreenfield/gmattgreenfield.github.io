@@ -1,13 +1,89 @@
-$beige: #dadbb6;
-$brown: #4d3e25;
 
+/* VARIABLES */
+
+/* RESETS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE STYLES */
 body {
-  background-color: $beige;
-  color: $brown;
+  background-color: white;
+  background:
+    linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 70%),
+    url(imgs/background.png),
+    white 0px 50px
+  ;
 }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 50px;
+}
+@font-face {
+    font-family: Gobold;
+    src: url(fonts/gobold.ttf);
+}
+
+h1, h2, h3, h4 {
+  font-family: Gobold;
+}
+
+.page {
+}
+.page__title { }
+
+/* HOME */
+.home {
+  height: 70%;
+  position: relative;
+}
+.home__text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.name {
+  font-size: 64px;
+  line-height: 83px;
+  text-align: center;
+}
+.tag-line {
+  text-align: center;
+}
+
+/* WORK */
+@import "sass-imports/owl-base";
+@import "sass-imports/owl-buttons";
+
+.work__item {
+  box-shadow: 5px 7px 14px 0px rgba(0,0,0,0.50);
+}
+
+.owl-item.center img {
+  width: 130% !important;
+}
+
+/* ABOUT */
+
+
+/* CONTACT */
+
+
+
+
+
+
+/* NAVIGATION */
+/* .nav {
+  li {
+    display: inline-block;
+    a {
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
+ */

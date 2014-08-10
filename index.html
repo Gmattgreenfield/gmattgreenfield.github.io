@@ -5,12 +5,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>The Shakedown Collective</title>
+    <title>Matt Greenfield</title>
 
-    <!-- Custom styles for this template -->
+    <!-- CSS -->
     <link href="styles.min.css" rel="stylesheet">
-
-    <!-- Google Font -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -20,6 +18,67 @@
   </head>
 
   <body>
-    Hello World
+    <!--       <ul class="nav">
+      <li><a>Home</a></li>
+      <li><a>About</a></li>
+      <li><a>Work</a></li>
+      <li><a>Contact</a></li>
+    </ul> -->
+    <div class="container">
+
+      <div class="page home" id="home">
+          <div class="home__text">
+            <h1 class="name">MATT GREENFIELD</h1>
+            <p class="tag-line">Web Design and development</p>
+          </div>
+      </div>
+
+      <div class="page work" id="work">
+        <h2 class="page__title">Work</h2>
+        <div class="owl-carousel">
+          <div class="work__item">
+            <img src="imgs/work/holly.jpg" alt="">
+            <div class="work__item__overlay"></div>
+          </div>
+          <div class="work__item">
+            <img src="imgs/work/bike-store.jpg" alt="">
+            <div class="work__item__overlay"></div>
+          </div>
+          <div class="work__item">
+            <img src="imgs/work/shakedown.jpg" alt="">
+            <div class="work__item__overlay"></div>
+          </div>
+          <div class="work__item">
+            <img src="imgs/work/blues-issue.jpg" alt="">
+            <div class="work__item__overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page about" id="about">
+        <h2 class="page__title">About Me</h2>
+      </div>
+
+      <div class="page contact" id="contact">
+        <h2 class="page__title">Contact</h2>
+      </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Owl Carousel 2 -->
+    <script src="owl/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            center: true,
+            margin:10,
+            nav:true,
+            navText: [ , ],
+        })
+      });
+    </script>
   </body>
 </html>
