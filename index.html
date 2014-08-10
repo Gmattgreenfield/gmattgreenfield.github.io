@@ -9,6 +9,7 @@
 
     <!-- CSS -->
     <link href="styles.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,36 +35,73 @@
       </div>
 
       <div class="page work" id="work">
-        <h2 class="page__title">Work</h2>
+
         <div class="owl-carousel">
           <div class="work__item">
             <img src="imgs/work/holly.jpg" alt="">
-            <div class="work__item__overlay"></div>
+            <div class="work__item__overlay">
+              <div class="work__item__overlay__caption">
+                <p>hollyjstone.co.uk</p>
+              </div>
+            </div>
           </div>
           <div class="work__item">
             <img src="imgs/work/bike-store.jpg" alt="">
-            <div class="work__item__overlay"></div>
+            <div class="work__item__overlay">
+              <div class="work__item__overlay__caption">
+                <p>thebikestore.co.uk</p>
+              </div>
+            </div>
           </div>
           <div class="work__item">
             <img src="imgs/work/shakedown.jpg" alt="">
-            <div class="work__item__overlay"></div>
+            <div class="work__item__overlay">
+              <div class="work__item__overlay__caption">
+                <p>shakedowns.co.uk</p>
+              </div>
+            </div>
           </div>
           <div class="work__item">
             <img src="imgs/work/blues-issue.jpg" alt="">
-            <div class="work__item__overlay"></div>
+            <div class="work__item__overlay">
+              <div class="work__item__overlay__caption">
+                <p>thebluesissue.co.uk</p>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
       <div class="page about" id="about">
         <h2 class="page__title">About Me</h2>
+        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
       <div class="page contact" id="contact">
         <h2 class="page__title">Contact</h2>
+        <div class="half">
+          <ul class="contact__links">
+            <li><p>@mattgreenfield</p></li>
+            <li><p>gmattgreenfield</p></li>
+            <li><p>gmattgreenfield@gmail.com</p></li>
+          </ul>
+        </div>
+        <div class="half">
+          <div class="contact__tweet">
+            <h3>Latest Tweet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
       </div>
 
-    </div>
+    </div><!-- Close Container -->
+
+    <footer>
+      <div class="container">
+        <p>Site built and designed by Matt Greenfield, with Sass, Gulp.js and Owl Carousel. Hosted by Github pages. </p>
+      </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -74,7 +112,6 @@
         $('.owl-carousel').owlCarousel({
             loop:true,
             center: true,
-            margin:10,
             nav:true,
             navText: [ , ],
         })
