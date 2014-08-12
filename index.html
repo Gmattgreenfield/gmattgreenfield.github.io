@@ -82,9 +82,9 @@
         <h2 class="page__title">Contact</h2>
         <div class="half">
           <ul class="contact__links">
-            <li><p>@mattgreenfield</p></li>
-            <li><p>gmattgreenfield</p></li>
-            <li><p>gmattgreenfield@gmail.com</p></li>
+            <li><p class="icon i-twitter">@mattgreenfield</p></li>
+            <li><p class="icon i-github">gmattgreenfield</p></li>
+            <li><p class="icon i-mail">gmattgreenfield@gmail.com</p></li>
           </ul>
         </div>
         <div class="half">
@@ -113,8 +113,20 @@
             loop:true,
             center: true,
             nav:true,
-            navText: [ , ],
+            navText: [,],
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                  items : 1,
+                },
+                // breakpoint from 480 up
+                480 : {
+                  items : 3,
+                },
+            }
         })
+        $( ".owl-prev" ).addClass( "icon i-arrow-left" );
+        $( ".owl-next" ).addClass( "icon i-arrow-right" );
       });
     </script>
   </body>
