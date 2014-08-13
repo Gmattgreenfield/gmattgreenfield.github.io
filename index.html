@@ -95,7 +95,7 @@
         <div class="half">
           <div class="contact__tweet">
             <h3>Latest Tweet</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div id="contact__tweet--latest"></div>
           </div>
         </div>
       </div>
@@ -115,24 +115,26 @@
     <script>
       $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
-            loop:true,
-            center: true,
-            nav:true,
-            navText: [,],
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                  items : 1,
-                },
-                // breakpoint from 480 up
-                480 : {
-                  items : 3,
-                },
-            }
+          loop:true,
+          center: true,
+          nav:true,
+          navText: [,],
+          responsive : {
+              // breakpoint from 0 up
+              0 : {
+                items : 1,
+              },
+              // breakpoint from 480 up
+              480 : {
+                items : 3,
+              },
+          }
         })
         $( ".owl-prev" ).addClass( "icon i-arrow-left" );
         $( ".owl-next" ).addClass( "icon i-arrow-right" );
       });
     </script>
+    <!-- Tweet fetcher -->
+    <script src="twitter-post-fetcher.js"></script>
   </body>
 </html>
