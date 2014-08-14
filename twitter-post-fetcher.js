@@ -68,6 +68,7 @@ var config1 = {
   "id": '499319278374371328',
   "domId": 'contact__tweet--latest',
   "maxTweets": 1,
-  "enableLinks": true
+  "enableLinks": true,
+  "showUser": false,
 };
 twitterFetcher.fetch(config1);

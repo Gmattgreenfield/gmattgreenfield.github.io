@@ -162,12 +162,11 @@ p {
   }
 }
 .contact__tweet {
-  p {
-    text-align: right;
+  text-align: right;
+  ul {
+      list-style-type: none;
   }
-}
-#contact__tweet--latest {
-  img {
+  .interact {
     display: none;
   }
 }
