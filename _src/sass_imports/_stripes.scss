@@ -1,0 +1,60 @@
+
+// STRIPES //
+
+
+
+body {
+
+    position: relative;
+    z-index: -1;
+}
+
+.stripe {
+
+    position:  relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 300%;
+        background-color: $secondary-colour;
+        z-index: -1;
+
+        transform: rotate(-10deg);
+
+        height: 100%;
+
+        position: absolute;
+        left: -100%;
+
+        @media (min-width: 600px) {
+            height: 110%;
+            top: -10%;
+        }
+
+    }
+
+    .inner-constraint {
+
+        padding: 10px 50px 10% 50px;
+        max-width: 960px;
+        margin: auto;
+    }
+
+}
+
+
+.footer {background-color: white;}
+.footer.stripe:before {
+	height: 50%;
+	top: -20%;
+
+	 @media (min-width: 600px) {
+            	height: 60%;
+            	top: -30%;
+        	}
+}
+
+.gap {
+    height: 400px;
+}
