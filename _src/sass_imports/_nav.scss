@@ -8,6 +8,8 @@
 	margin: 0;
 	padding: 0;
 
+	z-index: 1;
+
 	li {
 		display: inline-block;
 		margin: 10px;
@@ -26,12 +28,21 @@
    			display: block;
    		}
 
+		position: initial;
 		width: 100%;
-		margin-top: 40px;
 
    		li {
    			display: block;
-   			border: 5px solid green;
+			width: 100%;
+			line-height: 3;
+			text-align: center;
+			background-color: $secondary-colour;
+			margin: 0;
+   			border-bottom: 2px solid $primary-color;
+			a {
+				color: $primary-color;
+				display: block;
+   			}
    		}
 
 	}
@@ -44,6 +55,7 @@
 	font-size: 40px;
 	text-align: right;
 	background-color: $secondary-colour;
+	@extend %box-shadow;
 
 	@media (max-width: 600px) {
 
