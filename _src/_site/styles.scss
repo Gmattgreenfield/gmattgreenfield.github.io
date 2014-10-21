@@ -1,0 +1,141 @@
+
+/* VARIABLES */
+$body-text: #191919;
+$secondary-colour: white;
+
+
+// INUIT
+
+  @import "bower_components/inuit-defaults/settings.defaults";
+  @import "bower_components/inuit-responsive-settings/settings.responsive";
+
+  @import "bower_components/inuit-functions/tools.functions";
+  @import "bower_components/inuit-mixins/tools.mixins";
+  @import "bower_components/inuit-responsive-tools/tools.responsive";
+
+  @import "bower_components/inuit-normalize/generic.normalize";
+  @import "bower_components/inuit-box-sizing/generic.box-sizing";
+
+  @import "bower_components/inuit-page/base.page";
+
+@import "bower_components/inuit-layout/objects.layout";
+
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+
+// Sass_imports
+
+@import "sass_imports/icon-font";
+@import "sass_imports/stripes";
+
+
+a {
+
+	text-decoration: none;
+	color: lighten($body-text, 10%);
+
+	&:hover {
+		color: $body-text;
+		text-decoration: underline;
+	}
+
+	.i {
+		text-decoration: none;
+	}
+
+}
+
+
+
+
+/* BASE STYLES */
+body {
+  color: $body-text;
+  background-color: white;
+  background-image: url('http://placekitten.com/g/1200/1200');
+  background-attachment: fixed;
+}
+
+
+@font-face {
+    font-family: Gobold;
+    src: url(fonts/gobold.ttf);
+}
+
+
+h1, h2, h3, h4 {
+  font-family: Gobold;
+}
+p {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* NAVIGATION */
+.nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	@media (max-width: 600px) {
+   		display:  none;
+	}
+
+	li {
+		display: inline-block;
+		a {
+			text-align: center;
+			text-decoration: none;
+			color: white;
+		}
+	}
+}
+
+.menu-toggle {
+
+	display: none;
+	text-decoration: none !important;
+	color: $secondary-colour;
+	font-size: 40px;
+	float: right;
+
+	@media (max-width: 600px) {
+
+   		display: inline;
+	}
+}
+
+
+// Header //
+
+header {
+	height: 60%;
+	position: relative;
+}
+
+.header__text {
+
+	position: absolute;
+	top: 30%;
+	color: white;
+	padding: 20px;
+}
+
+.name {
+
+	font-size: 64px;
+	line-height: 83px;
+	margin: 0;
+}
+
+.tag-line {
+
+	margin: 10px 0;
+}
+
+
+
+.page__title {
+	text-align: center;
+}
