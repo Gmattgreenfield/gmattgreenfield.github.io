@@ -34,7 +34,7 @@ $secondary-colour: white;
 /* BASE STYLES */
 body {
   color: $body-text;
-  background-color: white;
+  background-color: black;
   background-image: url('http://placekitten.com/g/1200/1200');
   background-attachment: fixed;
 }
@@ -160,4 +160,9 @@ header {
 
 .page__title {
 	text-align: center;
+}
+
+
+.portfolio-image {
+	box-shadow: 0 0 8px 1px rgba(0,0,0,.1);
 }
