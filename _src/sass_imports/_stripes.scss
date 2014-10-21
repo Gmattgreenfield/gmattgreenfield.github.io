@@ -5,56 +5,63 @@
 
 body {
 
-    position: relative;
-    z-index: -1;
+	position: relative;
+	z-index: -1;
 }
 
 .stripe {
 
-    position:  relative;
+	position:  relative;
+	background-color: $secondary-colour;
 
-    &:before {
-        content: "";
-        display: block;
-        width: 300%;
-        background-color: $secondary-colour;
-        z-index: -1;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		background-color: $secondary-colour;
+		z-index: -1;
+		transform: rotate(-10deg);
 
-        transform: rotate(-10deg);
+		position: absolute;
 
-        height: 100%;
 
-        position: absolute;
-        left: -100%;
+		width: 300%;
 
-        @media (min-width: 600px) {
-            height: 110%;
-            top: -10%;
-        }
+		left: -160%;
 
-    }
+		// Default
+		height: 250px;
 
-    .inner-constraint {
+		// Small Screens
+		@media (max-width: 600px) {
+			height: 125px;
+		}
 
-        padding: 10px 50px 10% 50px;
-        max-width: 960px;
-        margin: auto;
-    }
+		// Large Screens
+		@media (min-width: 1200px) {
+			height: 250px;
+		}
+
+		// Stupidly big Screens
+		@media (min-width: 1350px) {
+			height: 400px;
+		}
+		// Stupidly big Screens
+		@media (min-width: 1850px) {
+			height: 480px;
+		}
+
+	}
+
 
 }
 
 
-.footer {background-color: white;}
-.footer.stripe:before {
-	height: 50%;
-	top: -20%;
 
-	 @media (min-width: 600px) {
-            	height: 60%;
-            	top: -30%;
-        	}
+.footer.stripe:after {
+	display: none;
 }
 
 .gap {
-    height: 400px;
+	height: 400px;
 }

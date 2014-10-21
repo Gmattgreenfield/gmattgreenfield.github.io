@@ -6,6 +6,8 @@ $secondary-colour: white;
 
 // INUIT
 
+$inuit-base-font-size:          18px;
+$inuit-base-line-height:        28px !default;
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-responsive-settings/settings.responsive";
 
@@ -25,6 +27,7 @@ $secondary-colour: white;
 
 // Sass_imports
 
+@import "sass_imports/nav";
 @import "sass_imports/icon-font";
 @import "sass_imports/stripes";
 @import "sass_imports/footer";
@@ -37,12 +40,13 @@ body {
   background-color: black;
   background-image: url('http://placekitten.com/g/1200/1200');
   background-attachment: fixed;
+  // overflow: hidden;
 }
 
 
 @font-face {
-    font-family: Gobold;
-    src: url(fonts/gobold.ttf);
+	font-family: Gobold;
+	src: url(fonts/gobold.ttf);
 }
 
 
@@ -73,65 +77,13 @@ hr {
 	margin: 60px 0 80px;
 }
 
-/* NAVIGATION */
-.nav {
-
-	position: absolute;
-	top: 10px;
-	right: 10px;
-
-	margin: 0;
-	padding: 0;
-
-	li {
-		display: inline-block;
-		margin: 10px;
-		font-size: 18px;
-		a {
-			text-align: center;
-			text-decoration: none;
-			color: white;
-		}
-	}
-
-	@media (max-width: 600px) {
-
-   		display:  none;
-   		.nav-open & {
-   			display: block;
-   		}
-
-		width: 100%;
-		margin-top: 40px;
-
-   		li {
-   			display: block;
-   			border: 5px solid green;
-   		}
-
-	}
-}
-
-.menu-toggle {
-
-	display: none;
-	text-decoration: none !important;
-	font-size: 40px;
-	text-align: right;
-	background-color: $secondary-colour;
-
-	@media (max-width: 600px) {
-
-   		display: block;
-
-	}
-}
 
 
 // Header //
 
 header {
-	height: 60%;
+	height: 600px;
+	max-height: 100%;
 	position: relative;
 }
 
@@ -156,6 +108,13 @@ header {
 	font-size: 18px;
 }
 
+
+.inner-constraint {
+
+	padding: 10px 50px;
+	max-width: 960px;
+	margin: auto;
+}
 
 
 .page__title {
