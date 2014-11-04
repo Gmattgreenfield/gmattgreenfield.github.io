@@ -1,2 +1,14 @@
-A modern, one page scrolling portfolio site.
-This site was created tothe specifications set by Holly. She wanted a sleek and simple site to promote herself and her work. The animated scrolling and active menu items make it a fun site to explore.
+---
+title: The Blues Issue
+slug: blues-issue
+link: www.thebluesissue.co.uk
+published: true
+---
+
+This band wanted a site that could host far more information than their popular Facebook page.
+
+I tried to stick away from modern flat design trends here as it does not suit the bands blues sound.
+
+Organising the wealth of information whilst keeping the navigation simple was the main challenge here.
+
+The site is built on wordpress and allows the band members to update all content including upcoming gigs.

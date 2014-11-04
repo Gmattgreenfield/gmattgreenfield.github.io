@@ -1,2 +1,9 @@
-A modern, one page scrolling portfolio site.
-This site was created tothe specifications set by Holly. She wanted a sleek and simple site to promote herself and her work. The animated scrolling and active menu items make it a fun site to explore.
+---
+title: The Bike Store
+slug: bike-store
+published: true
+---
+
+I built a custom wordpress theme for this bricks and mortar bike shop. The brief was to provide an online catalougue without ecommerce functionality, to encourage customers to contact or visit the shop in person. I really wanted to convey the benefits of using a local shop and its friendly staff.
+
+I created my own Wordpress plugin as I could not find all of the functionality required. The code is now open-sourced and availble on Github.

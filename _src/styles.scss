@@ -43,26 +43,20 @@ $inuit-base-line-height:        28px !default;
 
 /* BASE STYLES */
 body {
-  color: $body-text;
-  background-color: black;
-  background-image: url('/imgs/background.png');
-  background-attachment: fixed;
-  overflow: hidden;
-}
-
-
-@font-face {
-	font-family: Gobold;
-	src: url(fonts/gobold.ttf);
+	color: $body-text;
+	background-color: black;
+	background-image: url('/imgs/background.png');
+	background-attachment: fixed;
+	overflow: hidden;
+	font-family: 'Noto Serif', serif;
 }
 
 
 h1, h2, h3, h4 {
-	font-family: Gobold;
+	font-family: 'Oswald', sans-serif;
 }
 
 p {
-	font-family: 'Noto Serif', serif;
 	font-weight: 400;
 	font-style: italic;
 }

@@ -1,2 +1,10 @@
-A modern, one page scrolling portfolio site.
-This site was created tothe specifications set by Holly. She wanted a sleek and simple site to promote herself and her work. The animated scrolling and active menu items make it a fun site to explore.
+---
+title: The Shakedown Collective
+slug: shakedown
+link: shakedowns.co.uk
+published: true
+---
+
+This one page showcase for local band 'The Shakedown Collective' utilises CSS3 animations (and a little help from jQuery) for an exciting and user engaging experience.
+
+A HTML5 audio player keeps the code clean and semantic.
