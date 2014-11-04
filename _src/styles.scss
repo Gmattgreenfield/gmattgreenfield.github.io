@@ -28,9 +28,11 @@ $inuit-base-line-height:        28px !default;
 @import "bower_components/inuit-page/base.page";
 
 @import "bower_components/inuit-layout/objects.layout";
-.one-half { width: 50%; }
 
 @import "bower_components/inuit-clearfix/trumps.clearfix";
+$inuit-use-fractions: false;
+@import "bower_components/inuit-widths/trumps.widths";
+@import "bower_components/inuit-widths-responsive/trumps.widths-responsive";
 
 // Sass_imports
 
@@ -55,12 +57,9 @@ body {
 h1, h2, h3, h4 {
 	font-family: 'Oswald', sans-serif;
 }
-
 p {
-	font-weight: 400;
 	font-style: italic;
 }
-
 a {
 
 	text-decoration: none;
@@ -94,10 +93,8 @@ header {
 
 .header__text {
 
-	position: absolute;
-	top: 30%;
 	color: white;
-	margin: 20px;
+	padding-top:  190px !important;
 }
 
 .name {

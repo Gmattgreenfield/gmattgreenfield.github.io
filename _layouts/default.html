@@ -22,7 +22,7 @@
 
     	<header>
 
-		<div class="header__text">
+		<div class="header__text inner-constraint">
 			<h1 class="name">MATT GREENFIELD</h1>
 			<p class="tag-line">Web Design and development</p>
 		</div>
@@ -61,14 +61,14 @@
 
 					{% for post in site.posts %}
 
-						<div class="layout__item one-half">
+						<div class="layout__item one-half palm-one-whole">
 							<h3>{{ post.title }}</h3>
 							<h5>{{ post.tags }}</h5>
 							{{ post.content }}
 							<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot1.jpg">
 						</div><!--
 
-						 --><div class="layout__item one-half">
+						 --><div class="layout__item one-half palm-one-whole">
 						 	<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot2.jpg">
 						 </div>
 
