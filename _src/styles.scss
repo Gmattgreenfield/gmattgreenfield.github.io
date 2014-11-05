@@ -41,7 +41,7 @@ $inuit-use-fractions: false;
 @import "sass_imports/stripes";
 @import "sass_imports/footer";
 
-
+$base-spacing-unit: $inuit-base-spacing-unit;
 
 /* BASE STYLES */
 body {
@@ -127,6 +127,7 @@ header {
 
 .portfolio-image {
 	@extend %box-shadow;
+	margin-bottom: $base-spacing-unit;
 }
 
 .btn {
