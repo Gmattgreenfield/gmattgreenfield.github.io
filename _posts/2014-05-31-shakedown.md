@@ -1,6 +1,6 @@
 ---
 title: The Shakedown Collective
-slug: shakedown
+slug: shakedowns
 link: shakedowns.co.uk
 published: true
 ---

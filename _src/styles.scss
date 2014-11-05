@@ -129,3 +129,13 @@ header {
 	@extend %box-shadow;
 }
 
+.btn {
+	display: inline-block;
+	line-height: 40px;
+	border: 2px solid black;
+	padding: 0 15px;
+	margin: 0 5px 20px 0;
+	&:hover {
+		text-decoration: none;
+	}
+}

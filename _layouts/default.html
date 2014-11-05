@@ -65,6 +65,11 @@
 							<h3>{{ post.title }}</h3>
 							<h5>{{ post.tags }}</h5>
 							{{ post.content }}
+							{% if post.link == "none"  %}
+
+								{% else %}
+								<a class="btn" href="{{ post.link }}">View Site</a>
+							{% endif %}
 							<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot1.jpg">
 						</div><!--
 

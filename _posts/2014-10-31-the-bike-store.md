@@ -1,6 +1,7 @@
 ---
 title: The Bike Store
 slug: bike-store
+link: none
 published: true
 ---
 
