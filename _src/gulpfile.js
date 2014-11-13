@@ -5,8 +5,8 @@ var prefix = require('gulp-autoprefixer');
 var sass = require('gulp-ruby-sass');
 
 var paths = {
-  scripts: ['client/js/**/*.coffee', '!client/external/**/*.coffee'],
-  images: 'client/img/**/*',
+  scripts: [''],
+  images: ['../imgs/*','../imgs/work/*',],
   styles: ['*.scss', 'sass_imports/*.scss']
 };
 
@@ -19,7 +19,9 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('../'));
 });
 
-
-gulp.task('default', function () {
-    gulp.watch('*.scss', ['sass']);
+gulp.task('watch', function () {
+    gulp.watch((paths.styles), ['sass']);
 });
+
+gulp.task('default', ['watch']);
+
