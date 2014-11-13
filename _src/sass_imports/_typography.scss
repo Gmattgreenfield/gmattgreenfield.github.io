@@ -1,0 +1,30 @@
+
+// ============ //
+// TYPOGRAPHY //
+// ============ //
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Oswald', sans-serif;
+}
+p {
+	font-style: italic;
+}
+a {
+
+	text-decoration: none;
+	color: lighten($body-text, 10%);
+
+	&:hover {
+		color: $body-text;
+		text-decoration: underline;
+	}
+
+
+}
+
+.page__title {
+	text-align: center;
+}

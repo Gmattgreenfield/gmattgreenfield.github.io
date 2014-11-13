@@ -1,14 +1,4 @@
 
-/* VARIABLES */
-$primary-color: #191919;
-$secondary-colour: white;
-
-$body-text: $primary-color;
-
-
-%box-shadow {
-	box-shadow: 0 0 8px 1px rgba(0,0,0,.1);
-}
 
 
 // INUIT
@@ -34,14 +24,44 @@ $inuit-use-fractions: false;
 @import "bower_components/inuit-widths/trumps.widths";
 @import "bower_components/inuit-widths-responsive/trumps.widths-responsive";
 
-// Sass_imports
+$base-spacing-unit: $inuit-base-spacing-unit;
+img {
+	max-width: 100%;
+}
 
-@import "sass_imports/nav";
+
+
+// ========== //
+// VARIABLES //
+// ========== //
+
+$primary-color: #191919;
+$secondary-colour: white;
+
+$body-text: $primary-color;
+
+
+%box-shadow {
+	box-shadow: 0 0 8px 1px rgba(0,0,0,.1);
+}
+
+
+// =========== //
+// SITE STYLES //
+// =========== //
+
+@import "sass_imports/typography";
 @import "sass_imports/icon-font";
 @import "sass_imports/stripes";
+@import "sass_imports/buttons";
+
+@import "sass_imports/nav";
+@import "sass_imports/header";
 @import "sass_imports/footer";
 
-$base-spacing-unit: $inuit-base-spacing-unit;
+
+
+
 
 /* BASE STYLES */
 body {
@@ -54,89 +74,22 @@ body {
 }
 
 
-h1, h2, h3, h4 {
-	font-family: 'Oswald', sans-serif;
-}
-p {
-	font-style: italic;
-}
-a {
-
-	text-decoration: none;
-	color: lighten($body-text, 10%);
-
-	&:hover {
-		color: $body-text;
-		text-decoration: underline;
-	}
-
-
-}
-
-img {
-	max-width: 100%;
-}
+// ============ //
+// TO BE MOVED //
+// ============ //
 
 hr {
 	margin: 60px 0 80px;
 }
 
-
-
-// Header //
-
-header {
-	height: 600px;
-	max-height: 100%;
-	position: relative;
-}
-
-.header__text {
-
-	color: white;
-	padding-top:  190px !important;
-}
-
-.name {
-
-	font-size: 64px;
-	line-height: 83px;
-	margin: 0;
-}
-
-.tag-line {
-
-	margin: 10px 0;
-	font-size: 18px;
-}
-
-
 .inner-constraint {
 
 	padding: 10px 50px;
-	max-width: 960px;
+	max-width: 1400px;
 	margin: auto;
 }
-
-
-.page__title {
-	text-align: center;
-}
-
-
 
 .portfolio-image {
 	@extend %box-shadow;
 	margin-bottom: $base-spacing-unit;
-}
-
-.btn {
-	display: inline-block;
-	line-height: 40px;
-	border: 2px solid black;
-	padding: 0 15px;
-	margin: 0 5px 20px 0;
-	&:hover {
-		text-decoration: none;
-	}
 }

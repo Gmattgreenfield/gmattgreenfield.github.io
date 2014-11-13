@@ -66,7 +66,7 @@ h[b]+'" class="twitter_reply_icon">Reply</a><a href="https://twitter.com/intent/
 // hashtags.
 var config1 = {
   "id": '499319278374371328',
-  "domId": 'contact__tweet--latest',
+  "domId": 'footer__tweet--latest',
   "maxTweets": 1,
   "enableLinks": true,
   "showUser": false,

@@ -1,0 +1,28 @@
+// ======= //
+// HEADER //
+// ======= //
+
+header {
+	height: 600px;
+	max-height: 100%;
+	position: relative;
+}
+
+.header__text {
+
+	color: white;
+	padding-top:  190px !important;
+}
+
+.name {
+
+	font-size: 64px;
+	line-height: 83px;
+	margin: 0;
+}
+
+.tag-line {
+
+	margin: 10px 0;
+	font-size: 18px;
+}
