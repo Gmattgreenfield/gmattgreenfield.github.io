@@ -7,12 +7,28 @@
 
 	display: inline-block;
 	line-height: 40px;
-	border: 2px solid black;
+	border: 2px solid;
 	padding: 0 15px;
 	margin: 0 5px 20px 0;
+
+	transition: all 0.5s easeIn;
 
 	&:hover {
 
 		text-decoration: none;
 	}
+}
+
+.btn--primary {
+
+	color: $body-text;
+	border-color: $body-text;
+
+	&:hover {
+		color: lighten($body-text, 20%);
+		border-color: lighten($body-text, 20%);
+
+		background-color: darken($body-text, 20%);
+	}
+
 }
