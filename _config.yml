@@ -1,4 +1,22 @@
 
+collections:
+- portfolio
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+
+
 
 # Serving
 port: 1234

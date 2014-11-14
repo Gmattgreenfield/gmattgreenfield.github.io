@@ -1,0 +1,27 @@
+
+<!-- Loop through the posts / portfolio items -->
+	<br>
+	<div class="layout">
+
+		{% for post in site.portfolio %}
+
+			<div class="layout__item one-half palm-one-whole">
+				<h3>{{ post.title }}</h3>
+				<h5>{{ post.tags }}</h5>
+				{{ post.content }}
+				{% if post.link == "none"  %}
+
+					{% else %}
+					<a class="btn btn--primary" href="{{ post.link }}">View Site</a>
+				{% endif %}
+				<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+			</div><!--
+
+			 --><div class="layout__item one-half palm-one-whole">
+			 	<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+			 </div>
+
+			<hr>
+
+		{% endfor %}
+	</div>

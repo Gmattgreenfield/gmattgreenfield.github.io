@@ -1,0 +1,18 @@
+
+<!-- Loop through the posts / portfolio items -->
+	<br>
+	<div class="layout">
+
+		{% for post in site.posts limit:4 %}<div class="layout__item one-half">
+
+				<h3>{{ post.title }}</h3>
+				<h5>{{ post.date | date: "%-d %B %Y" }}</h5>
+				<h5>{{ post.tags }}</h5>
+				{{ post.excerpt }}
+				<a class="btn btn--primary" href="{{ post.url }}">View Post</a>
+
+			</div><!--
+
+		-->{% endfor %}
+
+	</div>
