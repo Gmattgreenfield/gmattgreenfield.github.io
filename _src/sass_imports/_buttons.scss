@@ -7,9 +7,10 @@
 
 	display: inline-block;
 	line-height: 40px;
-	border: 2px solid;
+	border: 3px solid;
 	padding: 0 15px;
 	margin: 0 0 5px 5px;
+	font-family: $heading-font;
 
 	transition: all 0.3s ease-in;
 
@@ -23,13 +24,14 @@
 
 	color: $body-text;
 	border-color: $body-text;
+	background-color: $secondary-colour;
 
 	&:hover {
 
 		color: lighten($body-text, 20%);
 		border-color: lighten($body-text, 20%);
 
-		background-color: lighten($body-text, 70%);
+		background-color: $grey;
 	}
 
 }

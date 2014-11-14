@@ -5,7 +5,7 @@
 
 		{% for post in site.posts limit:4 %}<div class="layout__item lap-one-half desk-one-third">
 
-			<div class="blog-excerpt">
+			<div class="info-box blog-excerpt">
 				<h3 class="blog-excerpt__title">{{ post.title }}</h3>
 				<p class="blog-excerpt__date">{{ post.date | date: "%-d %B %Y" }}</p>
 				<p class="blog-excerpt__tags">{{ post.tags }}</p>

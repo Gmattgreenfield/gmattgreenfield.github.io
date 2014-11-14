@@ -5,7 +5,6 @@
 
 .blog-excerpt {
 
-	border: 1px solid $primary-colour;
 	padding: $inuit-base-spacing-unit;
 	margin-bottom: $inuit-base-spacing-unit;
 
@@ -28,6 +27,17 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 
+	}
+
+}
+
+
+.blog__date-warning {
+
+	display: none;
+
+	p {
+		margin: 0;
 	}
 
 }

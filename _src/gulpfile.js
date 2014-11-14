@@ -51,6 +51,7 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function () {
     gulp.watch((paths.styles), ['sass']);
+    gulp.watch((paths.scripts), ['scripts']);
 });
 
 gulp.task('default', ['watch']);

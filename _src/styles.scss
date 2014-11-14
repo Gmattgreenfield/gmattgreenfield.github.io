@@ -37,9 +37,11 @@ img {
 
 $primary-colour: #191919;
 $secondary-colour: white;
+$grey: rgb(240, 240, 240);
+$gray: $grey;
 
 $body-text: $primary-colour;
-
+$info-box-background: $grey;
 
 %box-shadow {
 	box-shadow: 0 0 8px 1px rgba(0,0,0,.1);
@@ -50,11 +52,14 @@ $body-text: $primary-colour;
 // SITE STYLES //
 // =========== //
 
+// OBJECTS
 @import "sass_imports/typography";
 @import "sass_imports/icon-font";
 @import "sass_imports/stripes";
 @import "sass_imports/buttons";
+@import "sass_imports/INFO-BOX";
 
+// PAGES
 @import "sass_imports/nav";
 @import "sass_imports/header";
 @import "sass_imports/footer";
@@ -71,7 +76,7 @@ body {
 	background-image: url('/imgs/background.png');
 	background-attachment: fixed;
 	overflow: hidden;
-	font-family: 'Noto Serif', serif;
+	font-family: $body-font;
 }
 
 

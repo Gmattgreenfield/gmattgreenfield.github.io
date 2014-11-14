@@ -3,11 +3,14 @@
 // TYPOGRAPHY //
 // ============ //
 
+$heading-font: 'Oswald', sans-serif;
+$body-font: 'Noto Serif', serif;
+
 h1,
 h2,
 h3,
 h4 {
-	font-family: 'Oswald', sans-serif;
+	font-family: $heading-font;
 }
 p {
 	font-style: italic;
