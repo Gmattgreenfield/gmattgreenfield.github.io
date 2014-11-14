@@ -8,7 +8,7 @@ var sass = require('gulp-ruby-sass');
 
 // Images
 var imagemin = require('gulp-imagemin');
-var pngcrush = require('imagemin-pngcrush');
+// var pngcrush = require('imagemin-pngcrush');
 
 var paths = {
   scripts: [''],
@@ -25,18 +25,18 @@ gulp.task('sass', function () {
         .pipe(prefix(["last 1 version", "> 1%", "ie 8", "ie 7"],{map: false }))
         .pipe(minifyCSS())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('../'));
+        .pipe(gulp.dest('../assets/css/'));
 });
 
-gulp.task('images', function () {
-    return gulp.src(paths.images)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngcrush()]
-        }))
-        .pipe(gulp.dest('dist'));
-});
+// gulp.task('images', function () {
+//     return gulp.src(paths.images)
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [{removeViewBox: false}],
+//             use: [pngcrush()]
+//         }))
+//         .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('watch', function () {
     gulp.watch((paths.styles), ['sass']);

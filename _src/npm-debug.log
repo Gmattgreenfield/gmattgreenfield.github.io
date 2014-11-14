@@ -1,0 +1,141 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'imagemin-pngcrush' ]
+2 info using npm@2.1.8
+3 info using node@v0.10.29
+4 silly cache add args [ 'imagemin-pngcrush', null ]
+5 verbose cache add spec imagemin-pngcrush
+6 silly cache add parsed spec { raw: 'imagemin-pngcrush',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'imagemin-pngcrush',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed imagemin-pngcrush@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'imagemin-pngcrush', range: '*', hasData: false }
+11 silly mapToRegistry name imagemin-pngcrush
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/imagemin-pngcrush
+15 verbose addNameRange registry:https://registry.npmjs.org/imagemin-pngcrush not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/imagemin-pngcrush
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 21:10:11
+19 verbose request id f24f6beb2eb74afd
+20 verbose etag "2PI94B33ZNSRDWHG0TBZ0SMWV"
+21 http request GET https://registry.npmjs.org/imagemin-pngcrush
+22 http 304 https://registry.npmjs.org/imagemin-pngcrush
+23 silly get cb [ 304,
+23 silly get   { date: 'Fri, 14 Nov 2014 21:10:12 GMT',
+23 silly get     server: 'Apache',
+23 silly get     via: '1.1 varnish',
+23 silly get     'last-modified': 'Fri, 14 Nov 2014 21:10:12 GMT',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     etag: '"2PI94B33ZNSRDWHG0TBZ0SMWV"',
+23 silly get     age: '20',
+23 silly get     'x-served-by': 'cache-lhr6333-LHR',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1415999412.332322,VS0,VE0',
+23 silly get     vary: 'Accept',
+23 silly get     'content-length': '0',
+23 silly get     'keep-alive': 'timeout=10, max=50',
+23 silly get     connection: 'Keep-Alive' } ]
+24 verbose etag https://registry.npmjs.org/imagemin-pngcrush from cache
+25 silly addNameRange number 2 { name: 'imagemin-pngcrush', range: '*', hasData: true }
+26 silly addNameRange versions [ 'imagemin-pngcrush',
+26 silly addNameRange   [ '0.1.0', '1.0.0', '2.0.0', '3.0.0', '3.0.1', '3.1.0', '4.0.0' ] ]
+27 verbose addNamed imagemin-pngcrush@4.0.0
+28 silly addNamed semver.valid 4.0.0
+29 silly addNamed semver.validRange 4.0.0
+30 silly cache afterAdd imagemin-pngcrush@4.0.0
+31 verbose afterAdd /Users/Matt/.npm/imagemin-pngcrush/4.0.0/package/package.json not in flight; writing
+32 verbose afterAdd /Users/Matt/.npm/imagemin-pngcrush/4.0.0/package/package.json written
+33 silly install resolved [ { name: 'imagemin-pngcrush',
+33 silly install resolved     version: '4.0.0',
+33 silly install resolved     description: 'pngcrush imagemin plugin',
+33 silly install resolved     license: 'MIT',
+33 silly install resolved     repository:
+33 silly install resolved      { type: 'git',
+33 silly install resolved        url: 'https://github.com/imagemin/imagemin-pngcrush' },
+33 silly install resolved     author:
+33 silly install resolved      { name: 'Kevin Mårtensson',
+33 silly install resolved        email: 'kevinmartensson@gmail.com',
+33 silly install resolved        url: 'https://github.com/kevva' },
+33 silly install resolved     engines: { node: '>=0.10.0' },
+33 silly install resolved     scripts: { test: 'node test/test.js' },
+33 silly install resolved     files: [ 'index.js' ],
+33 silly install resolved     keywords:
+33 silly install resolved      [ 'compress',
+33 silly install resolved        'gulpplugin',
+33 silly install resolved        'image',
+33 silly install resolved        'imageminplugin',
+33 silly install resolved        'img',
+33 silly install resolved        'minify',
+33 silly install resolved        'optimize',
+33 silly install resolved        'png',
+33 silly install resolved        'pngcrush' ],
+33 silly install resolved     dependencies:
+33 silly install resolved      { 'exec-buffer': '^1.0.1',
+33 silly install resolved        'is-png': '^1.0.0',
+33 silly install resolved        'pngcrush-bin': '^2.0.0',
+33 silly install resolved        through2: '^0.6.1' },
+33 silly install resolved     devDependencies:
+33 silly install resolved      { ava: '^0.0.4',
+33 silly install resolved        'buffer-equal': '^0.0.1',
+33 silly install resolved        'vinyl-file': '^1.1.0' },
+33 silly install resolved     gitHead: '9dc32021f713720dbf72d11e228926df465d80e7',
+33 silly install resolved     bugs: { url: 'https://github.com/imagemin/imagemin-pngcrush/issues' },
+33 silly install resolved     homepage: 'https://github.com/imagemin/imagemin-pngcrush',
+33 silly install resolved     _id: 'imagemin-pngcrush@4.0.0',
+33 silly install resolved     _shasum: '61e5291beb5dbd2b87be5cab440f1df61114a801',
+33 silly install resolved     _from: 'imagemin-pngcrush@*',
+33 silly install resolved     _npmVersion: '2.1.5',
+33 silly install resolved     _nodeVersion: '0.10.32',
+33 silly install resolved     _npmUser: { name: 'kevva', email: 'kevinmartensson@gmail.com' },
+33 silly install resolved     maintainers: [ [Object], [Object] ],
+33 silly install resolved     dist:
+33 silly install resolved      { shasum: '61e5291beb5dbd2b87be5cab440f1df61114a801',
+33 silly install resolved        tarball: 'http://registry.npmjs.org/imagemin-pngcrush/-/imagemin-pngcrush-4.0.0.tgz' },
+33 silly install resolved     directories: {},
+33 silly install resolved     _resolved: 'https://registry.npmjs.org/imagemin-pngcrush/-/imagemin-pngcrush-4.0.0.tgz',
+33 silly install resolved     readme: 'ERROR: No README data found!' } ]
+34 info install imagemin-pngcrush@4.0.0 into /Users/Matt/Documents/Websites/github-pages/_src
+35 info installOne imagemin-pngcrush@4.0.0
+36 verbose installOne of imagemin-pngcrush to /Users/Matt/Documents/Websites/github-pages/_src not in flight; installing
+37 verbose lock using /Users/Matt/.npm/_locks/imagemin-pngcrush-d234725b42ccee2b.lock for /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+38 silly install write writing imagemin-pngcrush 4.0.0 to /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+39 silly cache addNamed cb imagemin-pngcrush@4.0.0
+40 verbose unbuild node_modules/imagemin-pngcrush
+41 info preuninstall imagemin-pngcrush@4.0.0
+42 info uninstall imagemin-pngcrush@4.0.0
+43 verbose unbuild rmStuff imagemin-pngcrush@4.0.0 from /Users/Matt/Documents/Websites/github-pages/_src/node_modules
+44 info postuninstall imagemin-pngcrush@4.0.0
+45 verbose gentlyRm vacuuming /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+46 silly gentlyRm purging /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+47 verbose unlock done using /Users/Matt/.npm/_locks/imagemin-pngcrush-d234725b42ccee2b.lock for /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+48 verbose stack Error: EACCES, unlink '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush'
+49 verbose cwd /Users/Matt/Documents/Websites/github-pages/_src
+50 error Darwin 14.0.0
+51 error argv "node" "/usr/local/bin/npm" "install" "imagemin-pngcrush"
+52 error node v0.10.29
+53 error npm  v2.1.8
+54 error path /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush
+55 error code EACCES
+56 error errno 3
+57 error Error: EACCES, unlink '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush'
+57 error  { [Error: EACCES, unlink '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush' }
+58 error Please try running this command again as root/Administrator.
+59 verbose exit [ 3, true ]
+60 verbose unbuild node_modules/imagemin-pngcrush
+61 verbose gentlyRm vacuuming /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+62 silly gentlyRm purging /Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush
+63 error error rolling back Error: EACCES, unlink '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush'
+63 error error rolling back  { [Error: EACCES, unlink '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush']
+63 error error rolling back   errno: 3,
+63 error error rolling back   code: 'EACCES',
+63 error error rolling back   path: '/Users/Matt/Documents/Websites/github-pages/_src/node_modules/imagemin-pngcrush/node_modules/.bin/pngcrush' }

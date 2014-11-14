@@ -3,13 +3,15 @@
 	<br>
 	<div class="layout">
 
-		{% for post in site.posts limit:4 %}<div class="blog-excerpt layout__item lap-one-half desk-one-third">
+		{% for post in site.posts limit:4 %}<div class="layout__item lap-one-half desk-one-third">
 
+			<div class="blog-excerpt">
 				<h3 class="blog-excerpt__title">{{ post.title }}</h3>
 				<p class="blog-excerpt__date">{{ post.date | date: "%-d %B %Y" }}</p>
 				<p class="blog-excerpt__tags">{{ post.tags }}</p>
 				<p class="blog-excerpt__excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
 				<a class="btn btn--primary" href="{{ post.url }}">View Post</a>
+			</div>
 
 			</div><!--
 
