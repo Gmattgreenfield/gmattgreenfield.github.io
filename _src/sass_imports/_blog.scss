@@ -6,14 +6,17 @@
 .blog-excerpt {
 
 	border: 1px solid $primary-colour;
+	padding: $inuit-base-spacing-unit;
+	margin-bottom: $inuit-base-spacing-unit;
 
 	&__title {
-		margin-bottom: 0;
+		margin: 0;
+		height: 65px;
 
 	}
 
 	&__date {
-
+		margin-top: 0;
 	}
 
 	&__tags {
@@ -21,6 +24,9 @@
 	}
 
 	&__excerpt {
+		height: 8 * $inuit-base-line-height;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 	}
 

@@ -6,12 +6,15 @@ var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
 var sass = require('gulp-ruby-sass');
 
+//Scripts
+var concat = require('gulp-concat');
+
 // Images
 var imagemin = require('gulp-imagemin');
-// var pngcrush = require('imagemin-pngcrush');
+  // var pngcrush = require('imagemin-pngcrush');
 
 var paths = {
-  scripts: [''],
+  scripts: ['javascript/*'],
   images: ['../imgs/*','../imgs/work/*',],
   styles: ['*.scss', 'sass_imports/*.scss']
 };
@@ -27,6 +30,14 @@ gulp.task('sass', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('../assets/css/'));
 });
+
+
+gulp.task('scripts', function() {
+  gulp.src(paths.scripts)
+    .pipe(concat('javascript.js'))
+    .pipe(gulp.dest('../assets/js'))
+});
+
 
 // gulp.task('images', function () {
 //     return gulp.src(paths.images)
