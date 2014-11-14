@@ -1,9 +1,8 @@
 
 <!-- Loop through the posts / portfolio items -->
-	<br>
 	<div class="layout">
 
-		{% for post in site.posts limit:4 %}<div class="layout__item lap-one-half desk-one-third">
+		{% for post in site.posts limit:6 %}<div class="layout__item lap-one-half desk-one-third">
 
 			<div class="info-box blog-excerpt">
 				<h3 class="blog-excerpt__title">{{ post.title }}</h3>
@@ -16,5 +15,7 @@
 			</div><!--
 
 		-->{% endfor %}
+
+		<a href="{{ site.url }}/archive.html" class="btn btn--primary">See More Posts</a>
 
 	</div>

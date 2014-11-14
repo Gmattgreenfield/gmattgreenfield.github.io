@@ -30,11 +30,13 @@
 			{% assign pages = site.pages | sort:"nav-position"  %}
 			<ul class="nav">
 			  {% for p in pages %}
-				<li>
-				  <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-					{{ p.title }}
-				  </a>
-				</li>
+			  	{% if p.nav != false %}
+					<li>
+						<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
+							{{ p.title }}
+						</a>
+					</li>
+			  	{% endif %}
 			  {% endfor %}
 			</ul>
 
@@ -61,7 +63,7 @@
 				<p class="blog__date" data-date="{{ page.date | date: "%Y%m%d" }}">{{ page.date | date: "%-d %B %Y" }}</p>
 			{% endif %}
 
-			{{ page.content }}
+			<p>{{ page.content }}</p>
 
 
 			{% if page.url == "/index.html" %}
@@ -70,6 +72,10 @@
 
 			{% if page.url == "/blog.html" %}
 				{% include blog.html %}
+			{% endif %}
+
+			{% if page.url == "/archive.html" %}
+				{% include blog-archive.html %}
 			{% endif %}
 
 		</section>

@@ -23,14 +23,19 @@
 	}
 
 	&__excerpt {
+
 		height: 8 * $inuit-base-line-height;
 		overflow: hidden;
-		text-overflow: ellipsis;
-
 	}
 
 }
 
+.blog-excerpt--archive {
+
+	.blog-excerpt__excerpt {
+		height: auto;
+	}
+}
 
 .blog__date-warning {
 
