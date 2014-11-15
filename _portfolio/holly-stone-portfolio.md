@@ -1,6 +1,7 @@
 ---
 title: Holly Stone Portfolio
 slug: holly
+display-order: 5
 link: none
 published: true
 ---

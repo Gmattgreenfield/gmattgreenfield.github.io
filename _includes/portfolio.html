@@ -3,7 +3,9 @@
 	<br>
 	<div class="layout">
 
-		{% for post in site.portfolio %}
+		{% assign portfolio-items = site.portfolio | sort:"display-order" %}
+
+		{% for post in portfolio-items %}
 
 			<div class="layout__item one-half palm-one-whole">
 				<h3>{{ post.title }}</h3>

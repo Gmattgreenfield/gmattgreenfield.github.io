@@ -1,6 +1,7 @@
 ---
 title: The Shakedown Collective
 slug: shakedowns
+display-order: 1
 link: http://www.shakedowns.co.uk
 published: true
 ---
