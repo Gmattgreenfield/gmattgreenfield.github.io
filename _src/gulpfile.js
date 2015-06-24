@@ -14,9 +14,9 @@ var imagemin = require('gulp-imagemin');
   // var pngcrush = require('imagemin-pngcrush');
 
 var paths = {
-  scripts: ['javascript/*'],
+  scripts: ['js/*'],
   images: ['../imgs/*','../imgs/work/*',],
-  styles: ['*.scss', 'sass_imports/*.scss']
+  styles: ['css/*.scss']
 };
 
 
@@ -34,7 +34,7 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function() {
   gulp.src(paths.scripts)
-    .pipe(concat('javascript.js'))
+    .pipe(concat('scripts.min.js'))
     .pipe(gulp.dest('../assets/js'))
 });
 
@@ -55,4 +55,3 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['watch']);
-

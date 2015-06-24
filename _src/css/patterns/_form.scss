@@ -1,0 +1,25 @@
+
+// Form input styles
+
+.label {
+	display: block;
+}
+
+.text-input {
+
+	width: 100%;
+	border: none;
+	padding: $base-spacing-unit / 2;
+	font-size: 1rem;
+
+	&:focus {
+		outline: none;
+		border: 1px solid;
+	}
+}
+
+// Vertical ryhthm for items that follow each other
+.text-input + .label,
+.text-input + .text-input {
+	margin-top: $base-spacing-unit;
+}

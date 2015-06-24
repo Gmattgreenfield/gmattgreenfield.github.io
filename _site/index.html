@@ -1,128 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Matt Greenfield Web Designer and Developer from Brighton, UK.">
-	<meta name="author" content="Matt Greenfield">
+	<head>
+		<title>Matt Greenfield | Portfolio</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Matt Greenfield Web Designer and Developer from Brighton, UK.">
+		<meta name="author" content="Matt Greenfield">
 
-	<title>Matt Greenfield | Portfolio</title>
+		<link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
 
-	<!-- CSS -->
-	<link href="/assets/css/styles.min.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Noto+Serif|Oswald' rel='stylesheet' type='text/css'>
+		<!-- CSS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link href="assets/css/styles.min.css" type="text/css" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	<![endif]-->
-</head>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
 
-<body>
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	<header>
+			ga('create', 'UA-51332366-2', 'auto');
+			ga('send', 'pageview');
 
-		<nav>
-			<a href="#" class="menu-toggle"  id="menu-toggle"><span class="i i-menu"></span></a>
+		</script>
+	</head>
+	<body>
 
-			
-			<ul class="nav">
-			  
-			  	
-			  
-			  	
-					<li>
-						<a class="active" href="/index.html">
-							Portfolio
-						</a>
-					</li>
-			  	
-			  
-			  	
-					<li>
-						<a  href="/about.html">
-							About Me
-						</a>
-					</li>
-			  	
-			  
-			  	
-					<li>
-						<a  href="/blog.html">
-							Blog
-						</a>
-					</li>
-			  	
-			  
-			  	
-					<li>
-						<a  href="/contact.html">
-							Contact
-						</a>
-					</li>
-			  	
-			  
-			</ul>
+		<header class="header">
 
-		</nav>
+			<div class="header__background"></div>
 
-		<div class="header__text inner-constraint">
-			<h1 class="name">MATT GREENFIELD</h1>
-			<p class="tag-line">Web Design and development</p>
-		</div>
+			<div class="inner-constraint">
 
-	</header>
+				<div class="logo"></div>
 
+				<nav class="nav">
+					
+					<ul class="nav">
+					
+						
+							<li>
+								<a class="active" href="/index.html">
+									Portfolio
+								</a>
+							</li>
+						
+					
+						
+							<li>
+								<a  href="/about.html">
+									About Me
+								</a>
+							</li>
+						
+					
+						
+							<li>
+								<a  href="/contact.html">
+									Contact
+								</a>
+							</li>
+						
+					
+					</ul>
+				</nav>
+			</div><!-- end inner constraint -->
 
-	<div class="stripe">
-		<section class="inner-constraint">
+		</header>
+
+		<main class="inner-constraint">
 
 			<h1 class="page__title">Portfolio</h1>
-
-			
 
 			<p><p>Here's a few of my personal favourite designs.</p>
 
 </p>
 
-
 			
 				
+
 <!-- Loop through the posts / portfolio items -->
-	<br>
-	<div class="layout">
+
+
 
 		
+		<section class="portfolio__item">
 
-		
+			<div class="grid">
 
-			<div class="layout__item one-half palm-one-whole">
-				<h3>The Shakedown Collective</h3>
-				<h5></h5>
-				<p>This one page showcase for local band ‘The Shakedown Collective’ utilises CSS3 animations (and a little help from jQuery) for an exciting and user engaging experience.</p>
+				<div class="grid__item one-half palm-one-whole">
+					<h3>The Shakedown Collective</h3>
+					<h5></h5>
+					<p>This one page showcase for local band ‘The Shakedown Collective’ utilises CSS3 animations (and a little help from jQuery) for an exciting and user engaging experience.</p>
 
 <p>A HTML5 audio player keeps the code clean and semantic.</p>
 
-				
-					<a class="btn btn--primary" href="http://www.shakedowns.co.uk">View Site</a>
-				
-				<img class="portfolio-image" src="imgs/work/shakedowns/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
-			</div><!--
+					
+						<a class="btn btn--primary" href="http://www.shakedowns.co.uk">View Site</a>
+					
+					<img class="portfolio__item__image" src="imgs/work/shakedowns/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+				</div><!--
 
-			 --><div class="layout__item one-half palm-one-whole">
-			 	<img class="portfolio-image" src="imgs/work/shakedowns/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-			 </div>
+				--><div class="grid__item one-half palm-one-whole">
+					<img class="portfolio__item__image" src="imgs/work/shakedowns/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+				 </div>
 
-			<hr>
+			</div>
 
+		</section>
 		
+		<section class="portfolio__item">
 
-			<div class="layout__item one-half palm-one-whole">
-				<h3>The Blues Issue</h3>
-				<h5></h5>
-				<p>This band wanted a site that could host far more information than their popular Facebook page.</p>
+			<div class="grid">
+
+				<div class="grid__item one-half palm-one-whole">
+					<h3>The Blues Issue</h3>
+					<h5></h5>
+					<p>This band wanted a site that could host far more information than their popular Facebook page.</p>
 
 <p>I tried to stick away from modern flat design trends here as it does not suit the bands blues sound.</p>
 
@@ -130,107 +132,108 @@
 
 <p>The site is built on wordpress and allows the band members to update all content including upcoming gigs.</p>
 
-				
-					<a class="btn btn--primary" href="http://www.thebluesissue.co.uk">View Site</a>
-				
-				<img class="portfolio-image" src="imgs/work/blues-issue/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
-			</div><!--
+					
+						<a class="btn btn--primary" href="http://www.thebluesissue.co.uk">View Site</a>
+					
+					<img class="portfolio__item__image" src="imgs/work/blues-issue/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+				</div><!--
 
-			 --><div class="layout__item one-half palm-one-whole">
-			 	<img class="portfolio-image" src="imgs/work/blues-issue/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-			 </div>
+				--><div class="grid__item one-half palm-one-whole">
+					<img class="portfolio__item__image" src="imgs/work/blues-issue/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+				 </div>
 
-			<hr>
+			</div>
 
+		</section>
 		
+		<section class="portfolio__item">
 
-			<div class="layout__item one-half palm-one-whole">
-				<h3>The Bike Store</h3>
-				<h5></h5>
-				<p>I built a custom wordpress theme for this bricks and mortar bike shop. The brief was to provide an online catalougue without ecommerce functionality, to encourage customers to contact or visit the shop in person. I really wanted to convey the benefits of using a local shop and its friendly staff.</p>
+			<div class="grid">
+
+				<div class="grid__item one-half palm-one-whole">
+					<h3>The Bike Store</h3>
+					<h5></h5>
+					<p>I built a custom wordpress theme for this bricks and mortar bike shop. The brief was to provide an online catalougue without ecommerce functionality, to encourage customers to contact or visit the shop in person. I really wanted to convey the benefits of using a local shop and its friendly staff.</p>
 
 <p>I created my own Wordpress plugin as I could not find all of the functionality required. The code is now open-sourced and availble on Github.</p>
 
-				
-
 					
-				<img class="portfolio-image" src="imgs/work/bike-store/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
-			</div><!--
-
-			 --><div class="layout__item one-half palm-one-whole">
-			 	<img class="portfolio-image" src="imgs/work/bike-store/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-			 </div>
-
-			<hr>
-
-		
-
-			<div class="layout__item one-half palm-one-whole">
-				<h3>Holly Stone Portfolio</h3>
-				<h5></h5>
-				<p>A modern, one page scrolling portfolio site.
-This site was created tothe specifications set by Holly. She wanted a sleek and simple site to promote herself and her work. The animated scrolling and active menu items make it a fun site to explore.</p>
-
-				
-
-					
-				<img class="portfolio-image" src="imgs/work/holly/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
-			</div><!--
-
-			 --><div class="layout__item one-half palm-one-whole">
-			 	<img class="portfolio-image" src="imgs/work/holly/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-			 </div>
-
-			<hr>
-
-		
-	</div>
-
-			
-
-			
-
-			
-
-		</section>
-	</div>
-
-	<div class="gap"></div>
-
-	<footer class="footer stripe">
-
-		 <div class="inner-constraint">
-			<div class="layout">
-
-				<div class="layout__item one-half palm-one-whole">
-				  <ul class="footer__links">
-					<li><a href=""><span class="i i-twitter"></span><p>@mattgreenfield</p></a></li>
-					<li><a href=""><span class="i i-github"></span><p>gmattgreenfield</p></a></li>
-					<li><a href=""><span class="i i-message"></span><p>gmattgreenfield@gmail.com</p></a></li>
-				  </ul>
+					<img class="portfolio__item__image" src="imgs/work/bike-store/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
 				</div><!--
 
-				 --><div class="layout__item one-half palm-one-whole">
-					<div class="footer__tweet">
-						<h3>Latest Tweet</h3>
-						<div id="footer__tweet--latest"></div>
-					</div>
-				</div><!--
-
-				 --><div class="layout__item">
-					<p>Site built and designed by Matt Greenfield, with Sass, Gulp.js and Jekyll. Hosted by Github pages. View the <a href="https://github.com/Gmattgreenfield/gmattgreenfield.github.io" target="_blank">source code</a></p>
-				</div>
+				--><div class="grid__item one-half palm-one-whole">
+					<img class="portfolio__item__image" src="imgs/work/bike-store/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+				 </div>
 
 			</div>
-		</div>
 
-	</footer>
+		</section>
+		
+		<section class="portfolio__item">
 
-	<!-- jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<div class="grid">
 
-	<!-- My JS -->
-	<script src="/assets/js/javascript.js"></script>
+				<div class="grid__item one-half palm-one-whole">
+					<h3>Holly Stone Portfolio</h3>
+					<h5></h5>
+					<p>A modern, one page scrolling portfolio site.
+This site was created tothe specifications set by Holly. She wanted a sleek and simple site to promote herself and her work. The animated scrolling and active menu items make it a fun site to explore.</p>
 
-</body>
+					
+					<img class="portfolio__item__image" src="imgs/work/holly/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+				</div><!--
+
+				--><div class="grid__item one-half palm-one-whole">
+					<img class="portfolio__item__image" src="imgs/work/holly/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+				 </div>
+
+			</div>
+
+		</section>
+		
+
+			
+
+		</main>
+
+		<footer class="footer">
+
+			<div class="inner-constraint">
+
+				<h1>Get in touch</h1>
+
+				<ul class="list-reset">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+<!-- 				<form method="post" action="contactsubmit.php">
+	<ul class="grid">
+		<li class="grid__item two-fifths palm-one-whole">
+			<label class="label" for="name">Your Name:</label>
+			<input class="text-input" id="name" type="text" name="Name">
+			<label class="label" for="email">Your Email:</label>
+			<input class="text-input" id="email" type="text" name="Email">
+		</li><li class="grid__item three-fifths palm-one-whole">
+			<label class="label" for="message">Your Message:</label>
+			<textarea class="text-input" id="message" name="Message" rows="10"></textarea>
+			<input type="submit" class="btn">
+		</li>
+	</ul>
+</form> -->
+
+				<small>Copyright 2015.</small>
+
+			</div><!-- end inner constraint -->
+
+		</footer>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- My JS -->
+		<script src="assets/js/scripts.min.js"></script>
+
+	</body>
+
 </html>

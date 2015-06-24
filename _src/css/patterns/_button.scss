@@ -1,0 +1,22 @@
+
+// Buttons
+
+.btn {
+
+	font-size: 1rem;
+	border: none;
+	padding: .7rem 1rem;
+	border-bottom: 5px solid;
+	background: white;
+	color: grey;
+
+	transition: border .5s;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		border-bottom: 0 solid;
+	}
+}

@@ -1,29 +1,29 @@
 
+{% assign portfolio-items = site.portfolio | sort:"display-order" %}
 <!-- Loop through the posts / portfolio items -->
-	<br>
-	<div class="layout">
 
-		{% assign portfolio-items = site.portfolio | sort:"display-order" %}
+
 
 		{% for post in portfolio-items %}
+		<section class="portfolio__item">
 
-			<div class="layout__item one-half palm-one-whole">
-				<h3>{{ post.title }}</h3>
-				<h5>{{ post.tags }}</h5>
-				{{ post.content }}
-				{% if post.link == "none"  %}
+			<div class="grid">
 
-					{% else %}
-					<a class="btn btn--primary" href="{{ post.link }}">View Site</a>
-				{% endif %}
-				<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
-			</div><!--
+				<div class="grid__item one-half palm-one-whole">
+					<h3>{{ post.title }}</h3>
+					<h5>{{ post.tags }}</h5>
+					{{ post.content }}
+					{% if post.link != "none"  %}
+						<a class="btn btn--primary" href="{{ post.link }}">View Site</a>
+					{% endif %}
+					<img class="portfolio__item__image" src="imgs/work/{{ post.slug }}/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+				</div><!--
 
-			 --><div class="layout__item one-half palm-one-whole">
-			 	<img class="portfolio-image" src="imgs/work/{{ post.slug }}/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-			 </div>
+				--><div class="grid__item one-half palm-one-whole">
+					<img class="portfolio__item__image" src="imgs/work/{{ post.slug }}/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
+				 </div>
 
-			<hr>
+			</div>
 
+		</section>
 		{% endfor %}
-	</div>
