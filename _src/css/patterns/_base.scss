@@ -22,9 +22,8 @@ background-color: transparent */
 	url("/assets/image/triangle--orange.png") 0 0 contain no-repeat,
 	url("/assets/image/triangle--blue.png") 0 0 contain no-repeat #F1F1EE; */
 	background:
-		url("/assets/image/triangle--orange.png") top,
-		url("/assets/image/triangle--green.png") 50%,
-		url("/assets/image/triangle--blue.png") right 0px bottom $footer-height
+		url("../img/triangle--orange.png") top,
+		url("../img/triangle--green.png") 50%,
 	;
 	background-size: contain;
 	background-repeat: no-repeat;

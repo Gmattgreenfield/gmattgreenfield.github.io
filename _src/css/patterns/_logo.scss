@@ -1,9 +1,23 @@
 
 // Logo
 
+$logo-width: 150px;
+$logo-height: 130px;
+
 .logo {
+
 	display: inline-block;
-	width: 130px;
+	width: 150px;
 	height: 130px;
-	background: grey;
+	background-image: url("../img/logo-background.svg");
+
+	&__initials {
+		display: block;
+		text-align: center;
+		font-size: 80px;
+		line-height: 1;
+	}
+	&__name {
+
+	}
 }
