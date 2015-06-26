@@ -14,6 +14,14 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
 
+
+    // Image optimizing
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    jpegtran = require('imagemin-jpegtran'),
+    gifsicle = require('imagemin-gifsicle'),
+    optipng = require('imagemin-optipng');
+
     // Serving to localhost
     spawn = require('child_process').spawn,
     express = require('express'),
@@ -25,6 +33,9 @@ var gulp = require('gulp'),
     // Critical Path CSS
     penthouse = require('penthouse'), // For creating the critical path css
     fs = require('fs'); // for writing the css to a jekyll include
+
+    // Reports
+    a11y = require('gulp-a11y');
 
 
 // Paths
@@ -88,7 +99,8 @@ gulp.task('serve', function () {
     console.log('-- The site can be viewed at localhost:' + port + ' --')
 });
 
-
+// Task: Penthouse
+// Critical Path CSS
 gulp.task('penthouse', function() {
     penthouse({
         url : 'http://localhost:4000/index.html',
@@ -101,6 +113,25 @@ gulp.task('penthouse', function() {
         fs.writeFile('../_includes/critical-css.html', criticalCss); // Write the contents to a jekyll include
     });
 });
+
+// Task: Optimize Images
+gulp.task('images', function () {
+    return gulp.src('../assets/img/**')
+	.pipe(imagemin({
+		progressive: true,
+		svgoPlugins: [{removeViewBox: false}],
+		use: [pngquant(), jpegtran(), optipng(), gifsicle()]
+	}))
+	.pipe(gulp.dest('../assets/img/'));
+});
+
+// Task: a11y
+gulp.task('audit', function () {
+  return gulp.src('../_site/**.html')
+    .pipe(a11y())
+    .pipe(a11y.reporter());
+});
+
 
 
 // Watch for changes

@@ -13,6 +13,12 @@
     "gulp-ruby-sass": "^0.7.1"
   },
   "devDependencies": {
+    "gulp-a11y": "^0.1.1",
+    "gulp-imagemin": "^2.3.0",
+    "imagemin-gifsicle": "^4.2.0",
+    "imagemin-jpegtran": "^4.2.0",
+    "imagemin-optipng": "^4.3.0",
+    "imagemin-pngquant": "^4.1.0",
     "penthouse": "^0.3.2"
   },
   "author": "Matt Greenfield",
