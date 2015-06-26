@@ -6,6 +6,17 @@
 # Icon must end with two \r
 Icon
 
+# Sass Cache
+.sass-cache/
+*/.sass-cache/
+
+
+# Node Modules
+node_modules/
+*/node_modules/
+_src/node_modules/
+
+
 # Thumbnails
 ._*
 
