@@ -14,6 +14,7 @@ Icon
 # Node Modules
 node_modules/
 */node_modules/
+_src/node_modules/
 
 
 # Thumbnails
