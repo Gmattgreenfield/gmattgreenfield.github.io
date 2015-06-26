@@ -17,6 +17,8 @@ node_modules/
 _src/node_modules/
 
 
+.jekyll-metadata
+
 # Thumbnails
 ._*
 
