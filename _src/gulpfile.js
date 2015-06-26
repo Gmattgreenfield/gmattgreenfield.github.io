@@ -6,17 +6,26 @@
 //
 
 var gulp = require('gulp'),
+
+    // Sass
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
+
+    // Serving to localhost
     spawn = require('child_process').spawn,
-    express = require('express');
+    express = require('express'),
 
     // Error handling, hmmmm.....
     // notify = require("gulp-notify"),
     // plumber = require('gulp-plumber');
+
+    // Critical Path CSS
+    penthouse = require('penthouse'), // For creating the critical path css
+    fs = require('fs'); // for writing the css to a jekyll include
+
 
 // Paths
 var paths = {
@@ -80,6 +89,19 @@ gulp.task('serve', function () {
 });
 
 
+gulp.task('penthouse', function() {
+    penthouse({
+        url : 'http://localhost:4000/index.html',
+        css : '../_site/assets/css/styles.min.css',
+        width: 1920, // viewport width
+        height: 1080 // viewport height
+    }, function(err, criticalCss) {
+        console.log(criticalCss);
+        console.log(err);
+        fs.writeFile('../_includes/critical-css.html', criticalCss); // Write the contents to a jekyll include
+    });
+});
+
 
 // Watch for changes
 gulp.task('watch', function () {
@@ -96,3 +118,5 @@ gulp.task('watch', function () {
 
 
 gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
+
+gulp.task('optimise', ['jekyll', 'serve', 'penthouse' ]);

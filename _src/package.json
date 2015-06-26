@@ -12,7 +12,9 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "penthouse": "^0.3.2"
+  },
   "author": "Matt Greenfield",
   "license": "ISC"
 }
