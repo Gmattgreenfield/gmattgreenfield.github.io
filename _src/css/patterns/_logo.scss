@@ -6,8 +6,16 @@
 	display: inline-block;
 	width: 160px;
 	height: 140px;
-	background-image: url("../img/logo-background.svg");
 	background-repeat: no-repeat;
+
+	position: relative; // To position the SVG's
+
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 
 	&__initials {
 		display: block;
