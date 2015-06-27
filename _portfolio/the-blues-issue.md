@@ -1,6 +1,6 @@
 ---
 title: The Blues Issue
-slug: blues-issue
+slug: blues
 display-order: 2
 link: http://www.thebluesissue.co.uk
 published: true

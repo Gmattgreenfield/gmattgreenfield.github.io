@@ -15,13 +15,25 @@
 					<a href="{{ post.link }}">View Site</a>
 				{% endif %}
 			</div>
-			<img class="portfolio__item__image" src="assets/img/portfolio/{{ post.slug }}/screenshot1.jpg" alt="{ post.slug }}-screenshot1">
+			<img class="portfolio__item__image"
+				srcset="assets/img/portfolio/{{ post.slug }}-1--large.jpg 1024w,
+						assets/img/portfolio/{{ post.slug }}-1--medium.jpg 640w,
+						assets/img/portfolio/{{ post.slug }}-1--small.jpg  320w"
+				sizes="(min-width: 600px) 50vw, (min-width: 1000px) 329px, 100vw"
+				src="assets/img/portfolio/{{ post.slug }}-1--medium.jpg"
+				alt="{{ post.slug }} website screenshot"
+			>
 		</div><!--
 
 		--><div class="grid__item one-half palm-one-whole">
-			<img class="portfolio__item__image" src="assets/img/portfolio/{{ post.slug }}/screenshot2.jpg" alt="{ post.slug }}-screenshot2">
-		 </div>
-
+			<img class="portfolio__item__image"
+				srcset="assets/img/portfolio/{{ post.slug }}-2--large.jpg 1024w,
+						assets/img/portfolio/{{ post.slug }}-2--medium.jpg 640w,
+						assets/img/portfolio/{{ post.slug }}-2--small.jpg  320w"
+				sizes="(min-width: 600px) 50vw (min-width: 1000px) 329px, 100vw"
+				src="assets/img/portfolio/{{ post.slug }}-2--medium.jpg"
+				alt="another {{ post.slug }} website screenshot"
+			>
 	</div>
 
 </section>
