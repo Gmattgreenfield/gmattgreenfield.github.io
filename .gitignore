@@ -15,8 +15,10 @@ Icon
 node_modules/
 */node_modules/
 _src/node_modules/
+npm-debug.log
 
-
+# Jekyll
+_site/
 .jekyll-metadata
 
 # Thumbnails
