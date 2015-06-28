@@ -1,29 +1,62 @@
 
 // Logo
 
+$logo-height: 140px;
+$animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
+
 .logo {
 
 	display: inline-block;
-	width: 160px;
-	height: 140px;
+	width: 190px;
+	height: $logo-height;
 	background-repeat: no-repeat;
 
-	position: relative; // To position the SVG's
+	position: relative; // To position the content
 
-	svg {
+	svg,
+	.logo__initials,
+	.logo__name {
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		// Hide it when we're scrolling
+		.scrolling-down & {
+			top: - $logo-height;
+		}
+	}
+
+	svg {
 		z-index: -1;
+	}
+	svg:first-of-type {
+		left: 14px;
+	}
+
+	// Animations
+	// Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
+	svg:first-of-type,
+	.logo__initials,
+	.logo__name {
+		transition: top .8s $animate-bounce $header-animate-time;
+	}
+	svg:last-of-type {
+		transition: top 1s $animate-bounce $header-animate-time;
 	}
 
 	&__initials {
 		display: block;
+		width: 100%;
 		text-align: center;
 		font-size: 80px;
 		line-height: 1;
 	}
-	&__name {
 
+	&__name {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-top: 80px;
 	}
+
 }

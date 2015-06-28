@@ -1,13 +1,15 @@
 
 // header
 
+$header-animate-time: $animation-time-fast;
+
 .header {
 
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	transition: top .8s;
+	transition: top $header-animate-time ease-in;
 
 	// Add this class to the body using javascript when scrolling down, to hide the header
 	.scrolling-down & {
@@ -20,7 +22,8 @@
 	}
 }
 
-
+// The slanted white box
+// TODO: do this with an after element and SVG as its broken on wide screens
 .header__background {
 
 	background: white;
