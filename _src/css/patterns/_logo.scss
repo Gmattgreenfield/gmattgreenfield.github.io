@@ -59,4 +59,13 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		margin-top: 80px;
 	}
 
+	// put the logo under the header and centered on palm
+	@include media-query(palm) {
+		position: absolute;
+		top: 75px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -2;
+
+	}
 }

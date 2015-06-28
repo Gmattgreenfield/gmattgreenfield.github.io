@@ -47,4 +47,8 @@ background-color: transparent */
 
 main.inner-constraint {
 	margin-top: $header-height;
+
+	@include media-query(palm) {
+		margin-top: 250px;
+	}
 }

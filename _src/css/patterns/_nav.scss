@@ -14,7 +14,7 @@
 	}
 
 	// Mobile menu
-	@media (max-width: 610px) {
+	@include media-query(palm) {
 		width: 100%;
 		margin: 0;
 		ul {
@@ -24,7 +24,8 @@
 				text-align: center;
 			}
 		}
-	}
+	} // end media-query
+
 }
 
 .nav a {
