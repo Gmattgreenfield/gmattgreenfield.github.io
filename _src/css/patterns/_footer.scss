@@ -2,21 +2,14 @@
 // Footer
 
 .footer {
+
 	height: $footer-height;
-
 	background: $teal;
-
-	&:before {
-		content: "";
-		display: block;
-		height: 50px;
-		background-image: linear-gradient(to right bottom, $body-background-color 0%, $body-background-color 50%, $teal 50%, $teal 100%)
-	}
 
 	.inner-constraint {
 		margin-top: 2rem;
 	}
-
+	
 	.contact-icons {
 		img {
 			width: 40px;

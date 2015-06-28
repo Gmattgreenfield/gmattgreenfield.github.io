@@ -3,28 +3,20 @@
 
 body,
 body * {
-
 	box-sizing: border-box;
 }
 
 body {
 
-/* 	background-image: none
-background-position: 0% 0%
-background-size: auto auto
-background-repeat: repeat
-background-origin: padding-box
-background-style: is itself a shorthand, its initial value is the concatenation of its own longhand properties
-background-clip: border-box
-background-color: transparent */
-
-/* 	background:
-	url("/assets/image/triangle--orange.png") 0 0 contain no-repeat,
-	url("/assets/image/triangle--blue.png") 0 0 contain no-repeat #F1F1EE; */
-	background:
-		url("../img/triangle--orange.png") top,
-		url("../img/triangle--green.png") 50%,
+	background-image:
+		url("../img/triangle--orange.png"),
+		url("../img/triangle--green.png"),
+		url("../img/triangle--blue.png"),
 	;
+	background-position:
+		right 0 top 40px, // 40px offset from the top
+	 	50%,
+		right 0px bottom ($footer-height - 3); // offset from the bottom by the footer height
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-color: $body-background-color;
@@ -46,7 +38,7 @@ background-color: transparent */
 }
 
 main.inner-constraint {
-	margin-top: $header-height;
+	margin-top: $header-height + $base-spacing-unit;
 
 	@include media-query(palm) {
 		margin-top: 250px;
