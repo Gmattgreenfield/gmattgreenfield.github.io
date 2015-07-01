@@ -2,21 +2,21 @@
 // Variables
 //
 
+// Typography
+$base-font-size:    1.2rem;
+$base-line-height:  1.6;
 
 // Spacing
-$base-spacing-unit: 24px;
+$base-spacing-unit: $base-font-size * $base-line-height;
 
 $grid-gutter: $base-spacing-unit;
 
-$header-height: 140px;
+$header-height: $base-font-size * 9;
 $footer-height: 250px;
 
-// Typography
-$base-font-size:    16px!default;
-$base-line-height:  24px!default;
 
-// Responsive Widths
-$lap-start:         655px;
+// Breakpoint Widths
+$lap-start:         670px;
 $desk-start:        1024px;
 
 // Colors

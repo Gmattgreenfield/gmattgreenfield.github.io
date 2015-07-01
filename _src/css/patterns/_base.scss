@@ -1,6 +1,13 @@
 
 // Base page styles
 
+html {
+	font-size: 16px;
+	@include media-query(palm) {
+		font-size: 15px;
+	}
+}
+
 body,
 body * {
 	box-sizing: border-box;
@@ -25,7 +32,7 @@ body {
 
 	// Typography
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.2rem;
+	font-size: $base-font-size;
 	line-height: 1.6;
 	color: #1C1C1C;
 }
@@ -35,6 +42,10 @@ body {
 	max-width: 1000px;
 	margin: auto;
 	padding: 0 $base-spacing-unit;
+
+	@include media-query(palm) {
+		padding: 0 ($base-spacing-unit * .7);
+	}
 }
 
 main.inner-constraint {
