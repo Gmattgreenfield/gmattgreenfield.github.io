@@ -17,9 +17,9 @@
 			// loadCSS: https://github.com/filamentgroup/loadCSS
 			function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
 			// load a file
-			loadCSS( "assets/css/styles.min.css" );
+			loadCSS( "/assets/css/styles.min.css" );
 		</script>
-		<noscript><link href="assets/css/styles.min.css" type="text/css" rel="stylesheet"></noscript>
+		<noscript><link href="/assets/css/styles.min.css" type="text/css" rel="stylesheet"></noscript>
 
 		<!-- HTML5 Shiv -->
 		<!--[if lt IE 9]>
@@ -50,13 +50,13 @@
 					{% assign pages = site.pages | sort:"nav-position"  %}
 					<ul class="list-reset">
 					{% for p in pages %}
-						{% if p.nav != false %}
+
 							<li>
 								<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
 									{{ p.title }}
 								</a>
 							</li>
-						{% endif %}
+
 					{% endfor %}
 					</ul>
 				</nav>
@@ -74,14 +74,25 @@
 
 		<main class="inner-constraint">
 
-			<h1 class="page__title">{{ page.title }}</h1>
-			<section class="content-box">
-				{{ page.content }}
-			</section>
+			<h1 class="page__title heading">{{ page.title }}</h1>
+			{% if page.url == "/blog.html" %}
+				{% include blog.html %}
+			{% else %}
 
-			{% if page.url == "/index.html" %}
-				{% include portfolio.html %}
+				{% if page.content != "" %}
+					<section class="content-box">
+						{% if page.path contains '_posts' %}
+							<a href="/blog.html">Back to Blog Home</a>
+						{% endif %}
+						{{ content }}
+					</section>
+				{% endif %}
+
+				{% if page.url == "/index.html" %}
+					{% include portfolio.html %}
+				{% endif %}
 			{% endif %}
+
 
 		</main>
 
@@ -94,17 +105,17 @@
 				<ul class="list-reset list--inline contact-icons">
 					<li>
 						<a href="https://twitter.com/mattgreenfield2">
-							<img src="assets/img/svg-icons/twitter.svg" alt="Twitter Logo">
+							<img src="/assets/img/svg-icons/twitter.svg" alt="Twitter Logo">
 						</a>
 					</li>
 					<li>
 						<a href="https://github.com/Gmattgreenfield">
-							<img src="assets/img/svg-icons/github.svg" alt="Github Logo">
+							<img src="/assets/img/svg-icons/github.svg" alt="Github Logo">
 						</a>
 					</li>
 					<li>
 						<a href="mailto:gmattgreenfield@gmail.com">
-							<img src="assets/img/svg-icons/email.svg" alt="Email icon">
+							<img src="/assets/img/svg-icons/email.svg" alt="Email icon">
 						</a>
 					</li>
 
@@ -119,7 +130,7 @@
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- My JS -->
-		<script async src="assets/js/scripts.min.js"></script>
+		<script async src="/assets/js/scripts.min.js"></script>
 
 	</body>
 

@@ -1,0 +1,18 @@
+
+// Links
+
+a {
+
+	color: $orange;
+	font-weight: bold; // Becuase without this it fails WCAG colour contrast guidelines
+
+	.heading &,
+	.heading &:visited {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&:visited {
+		color: $teal;
+	}
+}

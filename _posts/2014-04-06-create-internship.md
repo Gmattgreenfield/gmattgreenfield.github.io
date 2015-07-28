@@ -1,6 +1,6 @@
 ---
 title: "My Internship with Create.net"
-description: My aims and goals from my web design internship with create.net
+excerpt: My aims and goals from my web design internship with create.net
 published: true
 ---
 

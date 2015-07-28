@@ -16,9 +16,9 @@ body * {
 body {
 
 	background-image:
-		url("../img/triangle--orange.png"),
-		url("../img/triangle--green.png"),
-		url("../img/triangle--blue.png"),
+		url("/assets/img/triangle--orange.png"),
+		url("/assets/img/triangle--green.png"),
+		url("/assets/img/triangle--blue.png"),
 	;
 	background-position:
 		right 0 top 40px, // 40px offset from the top

@@ -3,16 +3,16 @@
 <!-- Loop through the posts / portfolio items -->
 
 {% for post in portfolio-items %}
-<section class="content-box">
+<article class="content-box">
 
 	<div class="grid">
 
 		<div class="grid__item one-half palm-one-whole">
-			<h2>{{ post.title }}</h2>
-			<div>
+			<h1 class="heading">{{ post.title }}</h1>
+			<div class="margin-bottom-1">
 				{{ post.content }}
 				{% if post.link != "none"  %}
-					<a href="{{ post.link }}">View Site</a>
+					<a href="{{ post.link }}" target="_blank">View Site</a>
 				{% endif %}
 			</div>
 			<img class="portfolio__item__image"
@@ -36,5 +36,5 @@
 			>
 	</div>
 
-</section>
+</article>
 {% endfor %}

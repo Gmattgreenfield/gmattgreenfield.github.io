@@ -6,6 +6,7 @@
 @import "tools/visuallyhidden";
 @import "tools/list-reset";
 @import "tools/img";
+@import "tools/utility";
 @import "tools/font-size-mixin";
 @import "tools/media-query-mixin";
 
@@ -17,10 +18,13 @@
 // Patterns
 @import "patterns/base";
 @import "patterns/typography";
+@import "patterns/heading";
+@import "patterns/links";
+@import "patterns/blockquote";
+@import "patterns/button";
 @import "patterns/header";
 @import "patterns/nav";
 @import "patterns/logo";
 @import "patterns/section";
 @import "patterns/footer";
 @import "patterns/form";
-@import "patterns/button";

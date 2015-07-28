@@ -135,13 +135,13 @@ gulp.task('audit', function () {
 
 
 // Watch for changes
-gulp.task('watch', function () {
+gulp.task('watch', ['serve'], function () {
 
     gulp.watch((paths.styles), ['sass']);
     gulp.watch((paths.scripts), ['scripts']);
 
-    // Run jekyll when a file html or markdown fil is changed
-    // MAKE SURE that the last to items in the watchlist are included or else infinite jekyll loop
+    // Run jekyll when a file html or markdown file is changed
+    // MAKE SURE that the last two items in the watchlist are included or else infinite jekyll loop
     gulp.watch(['../*.html', '../*/*.html', '../*/*.md', '!../_site/**', '!../_site/*/**'], ['jekyll']);
 
 
@@ -150,4 +150,4 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
 
-gulp.task('optimise', ['jekyll', 'serve', 'penthouse' ]);
+gulp.task('optimise', ['jekyll', 'serve', 'penthouse', 'images' ]);

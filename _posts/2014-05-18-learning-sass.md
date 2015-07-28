@@ -1,6 +1,6 @@
 ---
 title: "Sass"
-description: My thoughts on Sass and how I'm using it in my projects.
+excerpt: My thoughts on Sass and how I'm using it in my projects.
 published: true
 ---
 
