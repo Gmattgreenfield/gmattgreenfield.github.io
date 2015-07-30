@@ -72,29 +72,41 @@
 
 		</header>
 
-		<main class="inner-constraint">
+		{% if page.path contains '_posts' %}
+			<article class="inner-constraint">
+		{% else %}
+			<main class="inner-constraint">
+		{% endif %}
 
 			<h1 class="page__title heading">{{ page.title }}</h1>
-			{% if page.url == "/blog.html" %}
-				{% include blog.html %}
-			{% else %}
 
-				{% if page.content != "" %}
-					<section class="content-box">
-						{% if page.path contains '_posts' %}
-							<a href="/blog.html">Back to Blog Home</a>
-						{% endif %}
-						{{ content }}
-					</section>
-				{% endif %}
+			{% comment %} if the page has content (in the markdown file), output it in a content-box {% endcomment %}
+			{% if page.content != "" %}
+				<div class="content-box">
+					{{ content }}
 
-				{% if page.url == "/index.html" %}
-					{% include portfolio.html %}
-				{% endif %}
+					{% comment %} if its the blog home page, include the blog summarys {% endcomment %}
+					{% if page.url == "/blog.html" %}
+						{% include blog.html %}
+					{% endif %}
+
+					{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}
+					{% if page.path contains '_posts' %}
+						<a href="/blog.html">Back to Blog Home</a>
+					{% endif %}
+				</div>
 			{% endif %}
 
+			{% comment %} include the portfolio include / layout on the portfolio page {% endcomment %}
+			{% if page.title == "Portfolio" %}
+				{% include portfolio.html %}
+			{% endif %}
 
-		</main>
+		{% if page.path contains '_posts' %}
+			</article>
+		{% else %}
+			</main>
+		{% endif %}
 
 		<footer class="footer">
 

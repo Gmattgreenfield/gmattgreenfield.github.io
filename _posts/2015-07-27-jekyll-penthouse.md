@@ -12,6 +12,6 @@ I first set up Penthouse as a Gulp task, so that the critical path CSS could be 
 
 Until I realised that Jekyll has a feature baked in for exactly this! Includes.
 
-So I've set Penthouse up to post its contents to a `critical-css.html` file in my Jekyll `_includes` directory. Then I'm including that file in the `<head>` of my template using `<style>{% raw  %}{% include critical-css.html %}{% endraw %}</style>`.
+So I've set Penthouse up to post its contents to a `critical-css.html` file in my Jekyll `_includes` directory. I'm doing this using the following in my gulpfile - `fs.writeFile('../_includes/critical-css.html', criticalCss);`. Then I'm including that file in the `<head>` of my template using `<style>{% raw  %}{% include critical-css.html %}{% endraw %}</style>`.
 
 At present, this CSS is the same for every page, I'm pondering how I will change this to that the critical path CSS can be different on every page. Its not so much of a problem as my pages don't differ much but if you have any ideas please send me a tweet.

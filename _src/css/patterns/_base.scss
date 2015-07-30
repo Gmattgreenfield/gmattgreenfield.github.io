@@ -34,12 +34,12 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: $base-font-size;
 	line-height: 1.6;
-	color: #1C1C1C;
+	color: $body-text-color;
 }
 
 .inner-constraint {
 
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: auto;
 	padding: 0 $base-spacing-unit;
 
@@ -48,7 +48,7 @@ body {
 	}
 }
 
-main.inner-constraint {
+body > .inner-constraint {
 	margin-top: $header-height + $base-spacing-unit;
 
 	@include media-query(palm) {
