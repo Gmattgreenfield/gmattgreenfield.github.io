@@ -35,14 +35,17 @@ var gulp = require('gulp'),
     fs = require('fs'); // for writing the css to a jekyll include
 
     // Reports
-    a11y = require('gulp-a11y');
+    a11y = require('gulp-a11y'),
+
+    // Live reload
+    livereload = require('gulp-livereload');
 
 
 // Paths
 var paths = {
     scripts: ['js/*'],
     images: ['../imgs/*','../imgs/work/*',],
-    styles: ['css/*.scss']
+    styles: ['css/*.scss','css/*/*.scss']
 };
 
 var port = 4000;
@@ -67,6 +70,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('../assets/css/'))
     .pipe(gulp.dest('../_site/assets/css/')) // Copy to static dir to avoid jekyll having to run again just to copy it over
 
+    .pipe(livereload());
 });
 
 // Task: Scripts
@@ -126,17 +130,16 @@ gulp.task('images', function () {
 });
 
 // Task: a11y
-gulp.task('audit', function () {
+gulp.task('a11y', function () {
   return gulp.src('../_site/**.html')
     .pipe(a11y())
     .pipe(a11y.reporter());
 });
 
-
-
 // Watch for changes
 gulp.task('watch', ['serve'], function () {
 
+    livereload.listen();
     gulp.watch((paths.styles), ['sass']);
     gulp.watch((paths.scripts), ['scripts']);
 
@@ -149,5 +152,5 @@ gulp.task('watch', ['serve'], function () {
 
 
 gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
-
 gulp.task('optimise', ['jekyll', 'serve', 'penthouse', 'images' ]);
+gulp.task('reports', ['a11y' ]);
