@@ -92,6 +92,7 @@ gulp.task('jekyll', function () {
     jekyll.on('exit', function (code) {
         console.log('-- Finished Jekyll Build --')
     })
+
 });
 
 // Task: Serve

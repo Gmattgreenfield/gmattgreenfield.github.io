@@ -85,16 +85,16 @@
 				<div class="content-box">
 					{{ content }}
 
-					{% comment %} if its the blog home page, include the blog summarys {% endcomment %}
-					{% if page.url == "/blog.html" %}
-						{% include blog.html %}
-					{% endif %}
-
 					{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}
 					{% if page.path contains '_posts' %}
 						<a href="/blog.html">Back to Blog Home</a>
 					{% endif %}
 				</div>
+			{% endif %}
+
+			{% comment %} if its the blog home page, include the blog summarys {% endcomment %}
+			{% if page.url == "/blog.html" %}
+				{% include blog.html %}
 			{% endif %}
 
 			{% comment %} include the portfolio include / layout on the portfolio page {% endcomment %}
@@ -143,7 +143,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- My JS -->
 		<script async src="/assets/js/scripts.min.js"></script>
-
+		<!-- Syntax Highlighting -->
+		<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+		<script async>
+			$('code').addClass("prettyprint");
+			$('pre').addClass("prettyprint");
+			$('pre code').removeClass("prettyprint");
+		</script>
 	</body>
 
 </html>

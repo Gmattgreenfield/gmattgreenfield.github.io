@@ -17,13 +17,17 @@
 	@include media-query(palm) {
 		width: 100%;
 		margin: 0;
-		ul {
-			display: flex;
+
 			li {
-				flex-grow: 1;
+				width: 33.33%;
 				text-align: center;
+
+				// Reduce the spacing between lines for when long page names wrap
+				@include media-query(palm) {
+					line-height: 1;
+				}
 			}
-		}
+
 	} // end media-query
 
 }
