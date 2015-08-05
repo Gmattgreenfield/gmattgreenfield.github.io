@@ -14,25 +14,26 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     concat = require('gulp-concat'),
 
-
     // Image optimizing
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jpegtran = require('imagemin-jpegtran'),
     gifsicle = require('imagemin-gifsicle'),
-    optipng = require('imagemin-optipng');
+    optipng = require('imagemin-optipng'),
 
     // Serving to localhost
     spawn = require('child_process').spawn,
     express = require('express'),
 
+    shell = require('gulp-shell'),
+
     // Error handling, hmmmm.....
     // notify = require("gulp-notify"),
-    // plumber = require('gulp-plumber');
+    // plumber = require('gulp-plumber'),
 
     // Critical Path CSS
     penthouse = require('penthouse'), // For creating the critical path css
-    fs = require('fs'); // for writing the css to a jekyll include
+    fs = require('fs'), // for writing the css to a jekyll include
 
     // Reports
     a11y = require('gulp-a11y'),
@@ -70,7 +71,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('../assets/css/'))
     .pipe(gulp.dest('../_site/assets/css/')) // Copy to static dir to avoid jekyll having to run again just to copy it over
 
-    .pipe(livereload());
+    .pipe(livereload())
 });
 
 // Task: Scripts
@@ -82,18 +83,10 @@ gulp.task('scripts', function() {
 
 // Task: Jekyll
 // Run jekyll and put the files in the `_/site` directory
-gulp.task('jekyll', function () {
-    var jekyll = spawn('jekyll', [
-        'build',
-        '--config', '../_config.yml',
-        '--source', '../',
-        '--destination', '../_site'
-    ]);
-    jekyll.on('exit', function (code) {
-        console.log('-- Finished Jekyll Build --')
-    })
+gulp.task('jekyll', shell.task([
+  'jekyll build --config ../_config.yml --source ../ --destination ../_site',
+]));
 
-});
 
 // Task: Serve
 // serve the `_site/` directory jekyll creates on to http://localhost:4000/
@@ -101,7 +94,7 @@ gulp.task('serve', function () {
     var app = express();
     app.use(express.static('../_site'));
     app.listen( port );
-    console.log('-- The site can be viewed at localhost:' + port + ' --')
+    console.log('-- The site can be viewed at localhost:' + port + ' --');
 });
 
 // Task: Penthouse
@@ -149,7 +142,7 @@ gulp.task('watch', ['serve'], function () {
     gulp.watch(['../*.html', '../*/*.html', '../*/*.md', '!../_site/**', '!../_site/*/**'], ['jekyll']);
 
 
-})
+});
 
 
 gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
