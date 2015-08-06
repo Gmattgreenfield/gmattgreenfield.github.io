@@ -9,6 +9,7 @@ $header-animate-time: $animation-time-fast;
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 10;
 	transition: top $header-animate-time ease-in;
 
 	// Add this class to the body using javascript when scrolling down, to hide the header

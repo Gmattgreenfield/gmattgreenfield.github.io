@@ -22,7 +22,6 @@ var gulp = require('gulp'),
     optipng = require('imagemin-optipng'),
 
     // Serving to localhost
-    spawn = require('child_process').spawn,
     express = require('express'),
 
     shell = require('gulp-shell'),
@@ -71,7 +70,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('../assets/css/'))
     .pipe(gulp.dest('../_site/assets/css/')) // Copy to static dir to avoid jekyll having to run again just to copy it over
 
-    .pipe(livereload())
+    // .pipe(livereload())
 });
 
 // Task: Scripts

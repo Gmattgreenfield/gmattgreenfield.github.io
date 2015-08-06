@@ -3,8 +3,12 @@
 
 a {
 
-	color: $orange;
-	font-weight: bold; // Becuase without this it fails WCAG colour contrast guidelines
+	// Links in the main page content
+	.content-box & {
+
+		color: $orange;
+		font-weight: bold; // Becuase without this it fails WCAG colour contrast guidelines
+	}
 
 	.heading &,
 	.heading &:visited {

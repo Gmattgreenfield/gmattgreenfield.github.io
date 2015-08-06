@@ -6,6 +6,8 @@ html {
 	@include media-query(palm) {
 		font-size: 15px;
 	}
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -16,9 +18,9 @@ body * {
 body {
 
 	background-image:
-		url("/assets/img/triangle--orange.png"),
-		url("/assets/img/triangle--green.png"),
-		url("/assets/img/triangle--blue.png"),
+		url("/assets/img/triangle--orange.svg"),
+		url("/assets/img/triangle--green.svg"),
+		url("/assets/img/triangle--blue.svg"),
 	;
 	background-position:
 		right 0 top 40px, // 40px offset from the top

@@ -17,18 +17,24 @@
 	@include media-query(palm) {
 		width: 100%;
 		margin: 0;
+		margin-top: $base-spacing-unit / 2;
 
-			li {
-				width: 33.33%;
-				text-align: center;
 
-				// Reduce the spacing between lines for when long page names wrap
-				@include media-query(palm) {
-					line-height: 1;
-				}
-			}
+		li {
+			width: 33.33%;
+			text-align: center;
+			line-height: 1;
+		}
 
 	} // end media-query
+
+	// Super small screens, just incase!
+	@media (max-width: 419px) {
+		margin-top: 0;
+		li {
+			vertical-align: middle;
+		}
+	}
 
 }
 
