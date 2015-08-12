@@ -13,7 +13,8 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 
 	position: relative; // To position the content
 
-	svg,
+	.logo__box-one,
+	.logo__box-two,
 	.logo__initials,
 	.logo__name {
 		position: absolute;
@@ -26,30 +27,32 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		}
 	}
 
-	svg {
+	.logo__box-one,
+	.logo__box-two {
 		z-index: -1;
 	}
-	svg:first-of-type {
+
+	.logo__box-one {
 		left: 14px;
 	}
 
+
 	// Animations
 	// Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
-	svg:first-of-type,
+	.logo__box-one,
 	.logo__initials,
 	.logo__name {
 		transition: top .8s $animate-bounce $header-animate-time;
 	}
-	svg:last-of-type {
+	.logo__box-two {
 		transition: top 1s $animate-bounce $header-animate-time;
 	}
 
 	&__initials {
-		display: block;
-		width: 100%;
 		text-align: center;
-		font-size: 80px;
-		line-height: 1;
+		z-index: 1;
+		width: 100%;
+		margin-top: 10px;
 	}
 
 	&__name {
@@ -57,6 +60,8 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		width: 100%;
 		text-align: center;
 		margin-top: 80px;
+		font-weight: bold;
+		color: $teal;
 	}
 
 	// put the logo under the header and centered on palm
