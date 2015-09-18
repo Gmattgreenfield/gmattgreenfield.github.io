@@ -84,6 +84,9 @@
 
 					{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}
 					{% if page.path contains '_posts' %}
+						<div class="">
+							<p>I'd be interested in hearing your thoughts on all of these observations and mublings, <a href="">send me a tweet</a>.</p>
+						</div>
 						<a href="/blog.html">Back to Blog Home</a>
 					{% endif %}
 				</div>
@@ -101,9 +104,6 @@
 
 		{% if page.path contains '_posts' %}
 			</article>
-			<aside class="">
-				I'd be interested in hearing your thoughts on all of these observations and mublings, <a href="">send me a tweet</a>.
-			</aside>
 		{% else %}
 			</main>
 		{% endif %}
