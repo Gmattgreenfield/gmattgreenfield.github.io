@@ -22,16 +22,6 @@
 			</div>
 		{% endif %}
 
-		{% comment %} if its the blog home page, include the blog summarys {% endcomment %}
-		{% if page.url == "/blog.html" %}
-			{% include blog.html %}
-		{% endif %}
-
-		{% comment %} include the portfolio include / layout on the portfolio page {% endcomment %}
-		{% if page.title == "Portfolio" %}
-			{% include portfolio.html %}
-		{% endif %}
-
 	{% if page.path contains '_posts' %}
 		</article>
 	{% else %}
