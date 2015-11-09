@@ -1,6 +1,9 @@
 
 collections:
-- portfolio
+  portfolio:
+    output: false
+  style-guide:
+    output: true
 
 defaults:
   -
@@ -13,6 +16,12 @@ defaults:
     scope:
       path: ""
       type: "posts"
+    values:
+     layout: "default"
+  -
+    scope:
+      path: ""
+      type: "style-guide"
     values:
      layout: "default"
 
