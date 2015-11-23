@@ -16,10 +16,10 @@ var gulp = require('gulp'),
 
     // Image optimizing
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    jpegtran = require('imagemin-jpegtran'),
-    gifsicle = require('imagemin-gifsicle'),
-    optipng = require('imagemin-optipng'),
+    // pngquant = require('imagemin-pngquant'),
+    // jpegtran = require('imagemin-jpegtran'),
+    // gifsicle = require('imagemin-gifsicle'),
+    // optipng = require('imagemin-optipng'),
 
     // Serving to localhost
     express = require('express'),
@@ -68,7 +68,7 @@ gulp.task('sass', function () {
 
     // Place in dest folder
     .pipe(gulp.dest('../assets/css/'))
-    .pipe(gulp.dest('../_site/assets/css/')) // Copy to static dir to avoid jekyll having to run again just to copy it over
+    .pipe(gulp.dest('../_site/assets/css/')); // Copy to static dir to avoid jekyll having to run again just to copy it over
 
     // .pipe(livereload())
 });
@@ -77,7 +77,7 @@ gulp.task('sass', function () {
 gulp.task('scripts', function() {
     gulp.src(paths.scripts)
     .pipe(concat('scripts.min.js'))
-    .pipe(gulp.dest('../assets/js'))
+    .pipe(gulp.dest('../assets/js'));
 });
 
 // Task: Jekyll
@@ -133,7 +133,11 @@ gulp.task('a11y', function () {
 gulp.task('watch', ['serve'], function () {
 
     livereload.listen();
-    gulp.watch((paths.styles), ['sass']);
+
+	// run the sass and penthouse task when path.styles are changed
+    gulp.watch((paths.styles), ['sass','penthouse']);
+
+	// run the scripts task when path.scripts are changed
     gulp.watch((paths.scripts), ['scripts']);
 
     // Run jekyll when a file html or markdown file is changed
@@ -144,6 +148,6 @@ gulp.task('watch', ['serve'], function () {
 });
 
 
-gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
+gulp.task('default', ['sass', 'penthouse', 'jekyll', 'serve', 'watch']);
 gulp.task('optimise', ['jekyll', 'serve', 'penthouse', 'images' ]);
 gulp.task('reports', ['a11y' ]);

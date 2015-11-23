@@ -13,39 +13,14 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 
 	position: relative; // To position the content
 
-	.logo__box-one,
-	.logo__box-two,
-	.logo__initials,
-	.logo__name {
+	// put the logo under the header and centered on palm
+	@include media-query(palm) {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 75px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -2;
 
-		// Hide it when we're scrolling
-		.scrolling-down & {
-			top: - $logo-height;
-		}
-	}
-
-	.logo__box-one,
-	.logo__box-two {
-		z-index: -1;
-	}
-
-	.logo__box-one {
-		left: 14px;
-	}
-
-
-	// Animations
-	// Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
-	.logo__box-one,
-	.logo__initials,
-	.logo__name {
-		transition: top .8s $animate-bounce $header-animate-time;
-	}
-	.logo__box-two {
-		transition: top 1s $animate-bounce $header-animate-time;
 	}
 
 	&__initials {
@@ -63,14 +38,41 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		font-weight: bold;
 		color: $teal;
 	}
+	
+}
 
-	// put the logo under the header and centered on palm
-	@include media-query(palm) {
-		position: absolute;
-		top: 75px;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: -2;
+.logo__box-one,
+.logo__box-two,
+.logo__initials,
+.logo__name {
+	position: absolute;
+	top: 0;
+	left: 0;
 
+	// Hide it when we're scrolling
+	.scrolling-down & {
+		top: - $logo-height;
 	}
+}
+
+.logo__box-one,
+.logo__box-two {
+	z-index: -1;
+	top: -80px;
+}
+
+.logo__box-one {
+	left: 14px;
+}
+
+
+// Animations
+// Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
+.logo__box-one,
+.logo__initials,
+.logo__name {
+	transition: top .8s $animate-bounce $header-animate-time;
+}
+.logo__box-two {
+	transition: top 1s $animate-bounce $header-animate-time;
 }
