@@ -4,7 +4,7 @@
 html {
 	font-size: 16px;
 	@include media-query(palm) {
-		font-size: 15px;
+		font-size: 14px;
 	}
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
