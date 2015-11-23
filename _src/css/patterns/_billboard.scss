@@ -1,0 +1,14 @@
+
+// billboard
+
+.billboard {
+	max-width: 800px;
+	margin: auto;
+	font-size: 2.4rem;
+	line-height: 1.2;
+	margin-bottom: $base-spacing-unit * 4;
+
+	p {
+		margin-bottom: 0;
+	}
+}
