@@ -39,6 +39,19 @@ body {
 	color: $body-text-color;
 }
 
+
+// flexbox sticky footer
+// TODO: remove $footer-height, flexbox should deal with that
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
 .inner-constraint {
 
 	max-width: 1200px;
