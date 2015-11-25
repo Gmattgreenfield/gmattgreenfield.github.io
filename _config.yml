@@ -1,9 +1,9 @@
 
 collections:
   portfolio:
-    output: false
-  style-guide:
     output: true
+  style-guide:
+    output: false
 
 defaults:
   -

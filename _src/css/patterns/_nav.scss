@@ -43,3 +43,9 @@
 	text-decoration: none;
 	color: inherit;
 }
+
+.nav a.selected {
+	
+	border-bottom: 3px solid #A2A2A2;
+	padding-bottom: 3px;
+}

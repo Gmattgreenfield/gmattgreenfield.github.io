@@ -7,13 +7,15 @@
 		<nav class="nav">
 			{% assign pages = site.pages | sort:"nav-position"  %}
 			<ul class="list-reset">
-			{% for p in pages %}<!--
+			{% for p in pages %}
+				{% if p.nav-position != 0 %}<!--
 				 --><li>
 						<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
 							{{ p.title }}
 						</a>
 					</li><!--
-			 -->{% endfor %}
+				 -->{% endif %}
+			{% endfor %}
 			</ul>
 		</nav>
 
