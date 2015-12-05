@@ -1,6 +1,5 @@
 ---
 title: Headings
-description: blah blah
+description: This allows for heading elements to be sized irrespective of their depth or semantics.
 ---
-
-<input type="text" class="text-input" placeholder="type here..."/>
+<h1 class="heading">This is a heading</h1>

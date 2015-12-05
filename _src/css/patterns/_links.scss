@@ -31,14 +31,20 @@ a {
 }
 
 // Reset some of the above if the link is a heading or an icon
-.heading,
-.contact-icons {
+%link-reset,
+%link-reset:visited,
+%link-reset:hover {
+	text-decoration: none;
+	color: inherit;
+	font-weight: normal;
+}
 
-	a,
-	a:visited,
-	a:hover {
-		text-decoration: none;
-		color: inherit;
-		font-weight: normal;
+.heading a {
+	@extend %link-reset;
+}
+a.icon {
+	@extend %link-reset;
+	&:hover {
+		background-color: transparent;
 	}
 }

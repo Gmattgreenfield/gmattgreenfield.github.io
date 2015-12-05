@@ -9,9 +9,11 @@
 		{{ page.content }}
 
 		{% for pattern in site.style-guide %}
+			<hr class="divider">
 			<h2>{{ pattern.title }}</h2>
 			<div>{{ pattern.description }}</div>
 			<div>{{ pattern.content }}</div>
+			{% highlight html %}{{ pattern.content }}{% endhighlight %}
 		{% endfor %}
 
 	</div>

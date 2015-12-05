@@ -14,7 +14,7 @@
 		<!-- Critical CSS -->
 		{% if page.title == "Home" %}
 			<style>{% include index-critical-css.html %}</style>
-		{% elsif page.url == "/portfolio/index.html" %}
+		{% elsif page.url == "/portfolio/" %}
 			<style>{% include portfolio-critical-css.html %}</style>
 		{% elsif page.path contains '_posts' or page.title == "Blog" %}
 			<style>{% include blog-critical-css.html %}</style>
