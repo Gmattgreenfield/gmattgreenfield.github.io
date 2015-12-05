@@ -38,11 +38,10 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		font-weight: bold;
 		color: $teal;
 	}
-	
+
 }
 
-.logo__box-one,
-.logo__box-two,
+.logo__box,
 .logo__initials,
 .logo__name {
 	position: absolute;
@@ -55,24 +54,27 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 	}
 }
 
-.logo__box-one,
-.logo__box-two {
+.logo__box {
 	z-index: -1;
-	top: -80px;
+}
+.logo__box--one {
+	left: 14px;
+	top: -78px;
+}
+.logo__box--two {
+	top: -87px;
 }
 
-.logo__box-one {
-	left: 14px;
-}
+
 
 
 // Animations
 // Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
-.logo__box-one,
+.logo__box--one,
 .logo__initials,
 .logo__name {
 	transition: top .8s $animate-bounce $header-animate-time;
 }
-.logo__box-two {
+.logo__box--two {
 	transition: top 1s $animate-bounce $header-animate-time;
 }

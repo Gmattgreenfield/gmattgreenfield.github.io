@@ -20,10 +20,13 @@ $lap-start:         670px;
 $desk-start:        1024px;
 
 // Colors
-$teal: #1D6976;
-$orange:  #E6790E;
 $body-background-color: #F1F1EE;
 $body-text-color: #1C1C1C;
+
+$teal: #1D6976;
+$orange:  #E6790E;
+$grey: lighten($body-text-color, 40%);
+
 
 
 // Transitions

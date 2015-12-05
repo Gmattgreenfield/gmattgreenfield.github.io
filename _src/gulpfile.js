@@ -112,7 +112,7 @@ gulp.task('penthouse', function() {
     });
 	// portfolio
 	penthouse({
-		url : 'http://localhost:4000/portfolio.html',
+		url : 'http://localhost:4000/portfolio/index.html',
 		css : '../_site/assets/css/styles.min.css',
 		width: 1920, // viewport width
 		height: 1080 // viewport height
@@ -123,7 +123,7 @@ gulp.task('penthouse', function() {
 	});
 	// blog
 	penthouse({
-		url : 'http://localhost:4000/blog.html',
+		url : 'http://localhost:4000/blog/index.html',
 		css : '../_site/assets/css/styles.min.css',
 		width: 1920, // viewport width
 		height: 1080 // viewport height
