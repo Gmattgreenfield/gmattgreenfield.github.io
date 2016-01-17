@@ -8,7 +8,7 @@ I've been hearing a lot of debate around ["Designing in the browser"](https://tw
 
 Without a shadow of a doubt, Chrome dev tools is the most important tool I use day in and day out, for making small tweaks or fixing bugs, its crucial to my workflow. But when in need of a design decision, I often find myself pushing pixels or tweaking colours in dev tools, waiting for some kind of devine inspiration that never comes.
 
-The temptation to go from concept, to wireframe to an in-browser protoype is oftern strong, and its how I like to work. But more and more often I'm finding that get some design decisions BEFORE building the code is super helpful for referring to when the thoughts in my head are not translating to the web page.
+The temptation to go from concept, to wireframe to an in-browser prototype is often strong, and its how I like to work. But more and more often I'm finding that get some design decisions BEFORE building the code is super helpful for referring to when the thoughts in my head are not translating to the web page.
 
 I use [Sketch](https://www.sketchapp.com/) to create these, I love how nothing can be made in Sketch that can't be replicated in the browser. The restraints are great and it really applies to my full-stack developer workflow.
 

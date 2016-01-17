@@ -42,4 +42,4 @@ Then I'm including that file in the `<head>` of my template using;
 
 At present, this CSS is the same for every page, I'm pondering how I will change this to that the critical path CSS can be different on every page. Its not so much of a problem as my pages don't differ much but if you have any ideas please send me a tweet.
 
-> Note: Since this post went live, I've updated my workflow to include a unique  CSS include for each page. The code can be seen (here)[https://github.com/mattgreenfield/mattgreenfield.github.io/blob/master/_src/gulpfile.js#L99].
+> **Note**: Since this post went live, I've updated my workflow to include a unique  CSS include for each page. The code can be seen (here)[https://github.com/mattgreenfield/mattgreenfield.github.io/blob/master/_src/gulpfile.js#L99].

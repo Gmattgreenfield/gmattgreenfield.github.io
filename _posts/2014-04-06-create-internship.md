@@ -23,3 +23,5 @@ I'll be honest, browser compatibility is something that I know is important but 
 Theres also the issues of  template compatibility and how content should be compatible with any use template. These are similar ideas (or so I think) in that I must ensure that every line of code is robust enough to stand up to the varying browsers and templates that it will be used in.
 
 So there we go, fingers crossed!
+
+> **Note**: Its been a long time since this blog post and I'm still working for Create now as a junior front end developer in a full time role.
