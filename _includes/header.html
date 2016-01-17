@@ -1,0 +1,32 @@
+<header class="header">
+
+	<div class="header__background"></div>
+
+	<div class="inner-constraint">
+
+		<nav class="nav">
+			{% assign pages = site.pages | sort:"nav-position"  %}
+			<ul class="list-reset"><!--
+			{% for p in pages %}
+				{% if p.nav-position != 0 %} --><li>
+						<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
+							{{ p.title }}
+						</a>
+					</li><!--
+					{% endif %}
+			{% endfor %}
+		--></ul>
+		</nav>
+
+		<div class="logo">
+			<a href="/">
+				<span class="logo__initials">{% include MG.svg %}</span>
+				<span class="logo__name">Matt Greenfield</span>
+			</a>
+			<span class="logo__box logo__box--one">{% include logo-light.svg %}</span>
+			<span class="logo__box logo__box--two">{% include logo-dark.svg %}</span>
+		</div>
+
+	</div><!-- end inner constraint -->
+
+</header>

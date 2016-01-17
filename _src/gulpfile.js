@@ -16,10 +16,10 @@ var gulp = require('gulp'),
 
     // Image optimizing
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    jpegtran = require('imagemin-jpegtran'),
-    gifsicle = require('imagemin-gifsicle'),
-    optipng = require('imagemin-optipng'),
+    // pngquant = require('imagemin-pngquant'),
+    // jpegtran = require('imagemin-jpegtran'),
+    // gifsicle = require('imagemin-gifsicle'),
+    // optipng = require('imagemin-optipng'),
 
     // Serving to localhost
     express = require('express'),
@@ -68,7 +68,7 @@ gulp.task('sass', function () {
 
     // Place in dest folder
     .pipe(gulp.dest('../assets/css/'))
-    .pipe(gulp.dest('../_site/assets/css/')) // Copy to static dir to avoid jekyll having to run again just to copy it over
+    .pipe(gulp.dest('../_site/assets/css/')); // Copy to static dir to avoid jekyll having to run again just to copy it over
 
     // .pipe(livereload())
 });
@@ -77,7 +77,7 @@ gulp.task('sass', function () {
 gulp.task('scripts', function() {
     gulp.src(paths.scripts)
     .pipe(concat('scripts.min.js'))
-    .pipe(gulp.dest('../assets/js'))
+    .pipe(gulp.dest('../assets/js'));
 });
 
 // Task: Jekyll
@@ -99,16 +99,39 @@ gulp.task('serve', function () {
 // Task: Penthouse
 // Critical Path CSS
 gulp.task('penthouse', function() {
+	// index
     penthouse({
         url : 'http://localhost:4000/index.html',
         css : '../_site/assets/css/styles.min.css',
         width: 1920, // viewport width
         height: 1080 // viewport height
     }, function(err, criticalCss) {
-        console.log(criticalCss);
+        // console.log(criticalCss);
         console.log(err);
-        fs.writeFile('../_includes/critical-css.html', criticalCss); // Write the contents to a jekyll include
+        fs.writeFile('../_includes/index-critical-css.html', criticalCss); // Write the contents to a jekyll include
     });
+	// portfolio
+	penthouse({
+		url : 'http://localhost:4000/portfolio/index.html',
+		css : '../_site/assets/css/styles.min.css',
+		width: 1920, // viewport width
+		height: 1080 // viewport height
+	}, function(err, criticalCss) {
+		// console.log(criticalCss);
+		console.log(err);
+		fs.writeFile('../_includes/portfolio-critical-css.html', criticalCss); // Write the contents to a jekyll include
+	});
+	// blog
+	penthouse({
+		url : 'http://localhost:4000/blog/index.html',
+		css : '../_site/assets/css/styles.min.css',
+		width: 1920, // viewport width
+		height: 1080 // viewport height
+	}, function(err, criticalCss) {
+		// console.log(criticalCss);
+		console.log(err);
+		fs.writeFile('../_includes/blog-critical-css.html', criticalCss); // Write the contents to a jekyll include
+	});
 });
 
 // Task: Optimize Images
@@ -133,7 +156,11 @@ gulp.task('a11y', function () {
 gulp.task('watch', ['serve'], function () {
 
     livereload.listen();
-    gulp.watch((paths.styles), ['sass']);
+
+	// run the sass and penthouse task when path.styles are changed
+    gulp.watch((paths.styles), ['sass','penthouse']);
+
+	// run the scripts task when path.scripts are changed
     gulp.watch((paths.scripts), ['scripts']);
 
     // Run jekyll when a file html or markdown file is changed
@@ -144,6 +171,6 @@ gulp.task('watch', ['serve'], function () {
 });
 
 
-gulp.task('default', ['sass', 'jekyll', 'serve', 'watch']);
+gulp.task('default', ['sass', 'penthouse', 'jekyll', 'serve', 'watch']);
 gulp.task('optimise', ['jekyll', 'serve', 'penthouse', 'images' ]);
 gulp.task('reports', ['a11y' ]);

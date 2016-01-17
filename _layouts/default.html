@@ -1,155 +1,36 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<title>Matt Greenfield | {{ page.title }}</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Matt Greenfield Web Designer and Developer from Brighton, UK.">
-		<meta name="author" content="Matt Greenfield">
+{% include head.html %}
 
-		<link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+{% include header.html %}
 
-		<!-- CSS -->
-		<style>{% include critical-css.html %}</style>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-		<script>
-			// loadCSS: https://github.com/filamentgroup/loadCSS
-			function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
-			// load a file
-			loadCSS( "/assets/css/styles.min.css" );
-		</script>
-		<noscript><link href="/assets/css/styles.min.css" type="text/css" rel="stylesheet"></noscript>
+	{% if page.path contains '_posts' %}
+		<article class="inner-constraint page-content">
+	{% else %}
+		<main class="inner-constraint page-content">
+	{% endif %}
 
-		<!-- HTML5 Shiv -->
-		<!--[if lt IE 9]>
-			  <script src="assets/js/html5shiv.min.js"></script>
-		<![endif]-->
+		<h1 class="page__title heading">{{ page.title }}</h1>
 
+		{% comment %} if the page has content (in the markdown file), output it in a content-box {% endcomment %}
+		{% if page.content != "" %}
+			<div class="content-box">
+				{{ content }}
 
-	</head>
-	<body>
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KJ6QB6"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KJ6QB6');</script>
-		<!-- End Google Tag Manager -->
-
-		<header class="header">
-
-			<div class="header__background"></div>
-
-			<div class="inner-constraint">
-
-				<nav class="nav">
-					{% assign pages = site.pages | sort:"nav-position"  %}
-					<ul class="list-reset">
-					{% for p in pages %}<!--
-						 --><li>
-								<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-									{{ p.title }}
-								</a>
-							</li><!--
-					 -->{% endfor %}
-					</ul>
-				</nav>
-
-				<div class="logo">
-					<span class="logo__initials">{% include MG.svg %}</span>
-					<span class="logo__name">Matt Greenfield</span>
-					<span class="logo__box-one">{% include logo-light.svg %}</span>
-					<span class="logo__box-two">{% include logo-dark.svg %}</span>
-				</div>
-
-			</div><!-- end inner constraint -->
-
-		</header>
-
-		{% if page.path contains '_posts' %}
-			<article class="inner-constraint">
-		{% else %}
-			<main class="inner-constraint">
+				{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}
+				{% if page.path contains '_posts' %}
+					<div class="">
+						<p>I'd be interested in hearing your thoughts on all of these observations and mublings, <a href="https://twitter.com/intent/tweet?screen_name=MattGreenfield2" target="_blank">send me a tweet</a>.</p>
+					</div>
+					<a href="/blog.html">Back to Blog Home</a>
+				{% endif %}
+			</div>
 		{% endif %}
 
-			<h1 class="page__title heading">{{ page.title }}</h1>
+	{% if page.path contains '_posts' %}
+		</article>
+	{% else %}
+		</main>
+	{% endif %}
 
-			{% comment %} if the page has content (in the markdown file), output it in a content-box {% endcomment %}
-			{% if page.content != "" %}
-				<div class="content-box">
-					{{ content }}
+{% include footer.html %}
 
-					{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}
-					{% if page.path contains '_posts' %}
-						<div class="">
-							<p>I'd be interested in hearing your thoughts on all of these observations and mublings, <a href="https://twitter.com/intent/tweet?screen_name=MattGreenfield2" target="_blank">send me a tweet</a>.</p>
-						</div>
-						<a href="/blog.html">Back to Blog Home</a>
-					{% endif %}
-				</div>
-			{% endif %}
-
-			{% comment %} if its the blog home page, include the blog summarys {% endcomment %}
-			{% if page.url == "/blog.html" %}
-				{% include blog.html %}
-			{% endif %}
-
-			{% comment %} include the portfolio include / layout on the portfolio page {% endcomment %}
-			{% if page.title == "Portfolio" %}
-				{% include portfolio.html %}
-			{% endif %}
-
-		{% if page.path contains '_posts' %}
-			</article>
-		{% else %}
-			</main>
-		{% endif %}
-
-		<footer class="footer">
-
-			<div class="inner-constraint">
-
-				<h1>Get in touch</h1>
-
-				<ul class="list-reset list--inline contact-icons">
-					<li>
-						<a href="https://twitter.com/mattgreenfield2">
-							<img src="/assets/img/svg-icons/twitter.svg" alt="Twitter Logo">
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/Gmattgreenfield">
-							<img src="/assets/img/svg-icons/github.svg" alt="Github Logo">
-						</a>
-					</li>
-					<li>
-						<a href="mailto:gmattgreenfield@gmail.com">
-							<img src="/assets/img/svg-icons/email.svg" alt="Email icon">
-						</a>
-					</li>
-
-				</ul>
-
-				<small>Copyright Matt Greenfield 2015.</small>
-
-			</div><!-- end inner constraint -->
-
-		</footer>
-
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- My JS -->
-		<script async src="/assets/js/scripts.min.js"></script>
-		<!-- Syntax Highlighting -->
-		<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
-		<script async>
-			$('code').addClass("prettyprint");
-			$('pre').addClass("prettyprint");
-			$('pre code').removeClass("prettyprint");
-		</script>
-	</body>
-
-</html>
+{% include foot.html %}

@@ -14,7 +14,10 @@
     "gulp-ruby-sass": "^0.7.1"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-a11y": "^0.1.1",
     "gulp-livereload": "^3.8.0",
+    "gulp-shell": "^0.5.1",
     "penthouse": "^0.3.2"
   },
   "author": "Matt Greenfield",

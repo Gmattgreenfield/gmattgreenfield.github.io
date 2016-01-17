@@ -28,18 +28,22 @@
 
 	} // end media-query
 
-	// Super small screens, just incase!
-	@media (max-width: 419px) {
-		margin-top: 0;
-		li {
-			vertical-align: middle;
-		}
-	}
 
 }
 
 .nav a {
 
 	text-decoration: none;
-	color: inherit;
+
+	border-bottom: 3px solid transparent;
+	padding-bottom: 3px;
+
+	&:hover {
+		border-bottom-color: $grey;
+	}
+	&.active {
+
+		border-bottom-color: $body-background-color;
+	}
+
 }
