@@ -21,8 +21,9 @@
 
 					<h1 class="heading">{{ post.title }}</h1>
 					<div class="margin-bottom-1">
-						{{ post.content }}
-						{% if post.link != "none"  %}
+						{{ post.excerpt }}
+						<a href="{{ post.url }}">Read More</a>
+						{% if post.link != null  %}
 							<a href="{{ post.link }}" target="_blank">View Site</a>
 						{% endif %}
 					</div>

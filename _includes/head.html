@@ -8,13 +8,13 @@
 		<meta name="description" content="Matt Greenfield Web Designer and Developer from Brighton, UK.">
 		<meta name="author" content="Matt Greenfield">
 
-		<link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+		<link rel="shortcut icon" type="image/ico" href="/assets/favicon.ico"/>
 
 		<!-- CSS -->
 		<!-- Critical CSS -->
 		{% if page.title == "Home" %}
 			<style>{% include index-critical-css.html %}</style>
-		{% elsif page.url == "/portfolio/" %}
+		{% elsif page.url contains "/portfolio/" %}
 			<style>{% include portfolio-critical-css.html %}</style>
 		{% elsif page.path contains '_posts' or page.title == "Blog" %}
 			<style>{% include blog-critical-css.html %}</style>
