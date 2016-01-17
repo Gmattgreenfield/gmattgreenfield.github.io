@@ -1,11 +1,11 @@
 ---
 title: Colour Picker Concept
 slug: colour-picker
-display-order: 1
-published: false
+display-order: 3
+published: true
 ---
 
-Challenged with creating a colour picker that doesn't allow for poor colour choices, and a weekend at home alone, I wireframed and prototyped this concept based on colour collections.
+Challenged with creating a colour picker that doesn't allow for poor colour choices, and a weekend at home alone, I wireframed and prototyped this concept based on "colour collections".
 
 ## The Brief
 - Sketch and prototype a colour picker, use a prototyping service such as [Marvel](https://marvelapp.com).
@@ -15,7 +15,6 @@ Challenged with creating a colour picker that doesn't allow for poor colour choi
 ## First steps
 I began by sketching with a pen and paper, adding notes and requirements for each stage.
 
-()[]
 
 ## Making it digital
 The next step was to get something more refined and so I turned to [Sketch]().

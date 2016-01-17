@@ -1,23 +1,19 @@
 ---
-title: "Accessibility and icons"
-excerpt: Icons are multilingual and need no translating, is it time for an 'international standard'?
+title: "Designing 'in the browser'"
+excerpt: Browsers are great for rapid prototyping, but I like to take a step back now and again.
 published: false
 ---
 
-I've just returned from a trip to Italy, where for the first time in my life I drove a car abroad. Before leaving I'd had a quick Google on what to expect from the italian highways and was assured that traffic lights in Italy conform to the "international standard" of red for stop, green for go and amber when changing - what a relief.
+I've been hearing a lot of debate around ["Designing in the browser"](https://twitter.com/search?q=design%20in%20browser&src=typd) recently and I thought I'd write down some of my thoughts:
 
-It struck me whilst driving around Italy that many other signs seemed pretty similar or identical to what I'm used to seeing on roads in the UK. Maybe they are also confirming to some kind of "international standard" or maybe there just wasn't a better way of showing it.
+Without a shadow of a doubt, Chrome dev tools is the most important tool I use day in and day out, for making small tweaks or fixing bugs, its crucial to my workflow. But when in need of a design decision, I often find myself pushing pixels or tweaking colours in dev tools, waiting for some kind of devine inspiration that never comes.
 
-Later on the holiday I wanted to find the directions to the Zoo. I searched for the Zoo and ended up on their website. It was written, of course, in Italian (of which I am ashamed to say I don't speak a word of). But I could use the hamburger icon to open the menu, and click on the 'map' icon which took me to a page with (I assume) directions and an embedded Google Map <a name="google-map-footnote">[1]</a>.
+The temptation to go from concept, to wireframe to an in-browser protoype is oftern strong, and its how I like to work. But more and more often I'm finding that get some design decisions BEFORE building the code is super helpful for referring to when the thoughts in my head are not translating to the web page.
 
-It got me thinking, just like the road signs, icons are multilingual by default, they don't need translating in to multiple languages to be understood. They tick the box for accessibility in terms of foreign languages. When we are considering multiple languages in web design, we don't need to consider changing the language of most icons (unless a cultural reference would not be understood) - a left arrow on a carousel for example.
+I use [Sketch](https://www.sketchapp.com/) to create these, I love how nothing can be made in Sketch that can't be replicated in the browser. The restraints are great and it really applies to my full-stack developer workflow.
 
-So maybe its time to create an "international standard" for icons on the web. For me, this is more of an organic process than having some governing body to regulate it. I believe its already happening with the "hamburger" icon; UX studies and research aside, the more its used, the more users will be familiar with it and will know what to expect when it it clicked / tapped / selected.
+But don't get me wrong, I don't spend long on these layouts and designs, nor do I wait for perfection before moving to the browser.
 
-Don't get me wrong, icons present there own accessibility issues <a name="icon-accessibility-footnote">[2]</a>., but they work across multiple languages and often for users who have not been to a site before.
+When I do get stuck and find myself pushing pixels in Dev tools, I can refer back to the designs, refine them and then move to back to the browser with a more solid idea of what I'm trying to create.
 
-<sup>[1](#google-map-footnote) You could argue that I only got to the Zoo becuase Google have made the map multi lingual but its a further than I would have got without the icons that I'd recognised. And a map is kinda just a big icon anyway isnt it? a graphical respresentation of a real world thing.</sup>
-
-<sup>[2](#icon-accessibility-footnote)
-many of which can be resolved with the correct use of aria tags and a label that can be responsabily hidden if required. I'd advise against using any icon without a corresponsind label for more reasons than one - as outlined [here]()
-</sup>
+So really I am not hugely for or against the "Designing in the browser" workflow, I've just found that theres a time and a place for it, and knowing when that is is vital to a frustration free process that produces the best outcomes.
