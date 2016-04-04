@@ -1,15 +1,21 @@
 
 // billboard
+$billboard-background: rgba($grey, 0.5);
 
 .billboard {
 	max-width: 800px;
 	margin: auto;
 	font-size: 2.3rem;
-	line-height: 1.25;
+	line-height: 1.73;
 	margin-bottom: $base-spacing-unit * 4;
+	display:inline;
+	background-color: $billboard-background;
+	outline: 10px solid $billboard-background;
+	border-bottom: 13px solid transparent;
 
 	p {
 		margin-bottom: 0;
+		display: inline;
 	}
 
 	a {
