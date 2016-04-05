@@ -2,6 +2,7 @@
 title: "Git what..? Git who..? Github? O right, cool"
 description: A github and command line newbie talks through the learning curve and how its benefitted my work.
 published: true
+type: blog
 ---
 
 I knew I needed version control long before I knew what is was and I have to admit that I had looked in to it before and been put off by how complex it seemed.

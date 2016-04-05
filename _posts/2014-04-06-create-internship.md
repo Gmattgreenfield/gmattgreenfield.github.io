@@ -2,6 +2,7 @@
 title: "My Internship with Create.net"
 excerpt: My aims and goals from my web design internship with create.net
 published: true
+type: blog
 ---
 
 Ok, so here goes, I've been accepted on to the Wired Sussex Internship program. Its a 6 week paid internship with [Create.net](https://www.create.net/). Working in the front end design team and creating templates for their users.

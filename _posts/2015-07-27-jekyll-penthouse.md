@@ -2,6 +2,7 @@
 title: "Jekyll and Critical Path CSS"
 excerpt: How I'm using Penthouse and Jekyll for my critical path CSS
 published: true
+type: blog
 ---
 
 A few weeks ago now I went to a [Async Brighton](http://asyncjs.com/) talk by [Jonas Ohlsson](https://twitter.com/pocketjoso) about Critical Path CSS. Jonas is the creator of [Penthouse](https://github.com/pocketjoso/penthouse) - a great tool for creating this CSS for you. He talked about all of its benefits and how its actually pretty simple to get working. I went home inspired but a little lost as to how I was going to implement it in my workplace.

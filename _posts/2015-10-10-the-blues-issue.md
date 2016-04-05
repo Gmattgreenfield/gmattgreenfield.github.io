@@ -4,6 +4,7 @@ slug: blues
 display-order: 1
 link: http://www.thebluesissue.co.uk
 published: true
+type: portfolio
 ---
 
 This band wanted a site that could host far more information than their popular Facebook page.

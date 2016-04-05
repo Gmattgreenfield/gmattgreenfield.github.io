@@ -1,7 +1,5 @@
 
 collections:
-  portfolio:
-    output: true
   style-guide:
     output: false
 

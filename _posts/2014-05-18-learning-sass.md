@@ -2,6 +2,7 @@
 title: "Sass"
 excerpt: My thoughts on Sass and how I'm using it in my projects.
 published: true
+type: blog
 ---
 
 Ok, these things have a learning curve but its so worth it.

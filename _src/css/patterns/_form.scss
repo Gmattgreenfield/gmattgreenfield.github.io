@@ -1,2 +1,43 @@
 
 // Form input styles
+
+.text-input {
+
+    // padding:
+    border: none;
+    border-bottom: 1px solid $teal;
+    font-size: inherit;
+    margin-bottom: $base-spacing-unit / 2;
+    background: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+
+    &--full {
+        width: 100%;
+    }
+}
+
+.label {
+    cursor: pointer;
+}
+
+.label-placeholder {
+    display: block;
+    position: absolute; // remove from the flow
+    margin-top: -40px;
+
+    input:focus + & {
+        margin-top: -55px;
+        font-size: .8em;
+
+    }
+
+}
+
+
+.reset-fieldset {
+    border: none;
+}
