@@ -34,3 +34,18 @@
 @import "patterns/form";
 
 // Third Party
+
+
+// Blog layout
+// one-third lap-one-half palm-one-whole
+.blog-summaries {
+    columns: 300px 3;
+    > article {
+        // display: inline-block;
+        break-inside: avoid;
+        padding-bottom: 1rem; // rework vertical rhythm to stop box-shadow overflowing columns
+    }
+    .content-box {
+        margin-bottom: 1rem;
+    }
+}
