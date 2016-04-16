@@ -3,12 +3,11 @@
 
 .text-input {
 
-    // padding:
-    border: none;
-    border-bottom: 1px solid $teal;
+    padding: $base-spacing-unit / 4;
+    border: 1px solid $body-text-color;
     font-size: inherit;
     margin-bottom: $base-spacing-unit / 2;
-    background: transparent;
+    background: rgba($body-text-color, .05);
 
     &:focus {
         outline: none;
@@ -22,19 +21,6 @@
 
 .label {
     cursor: pointer;
-}
-
-.label-placeholder {
-    display: block;
-    position: absolute; // remove from the flow
-    margin-top: -40px;
-
-    input:focus + & {
-        margin-top: -55px;
-        font-size: .8em;
-
-    }
-
 }
 
 

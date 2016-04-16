@@ -25,6 +25,7 @@
 @import "patterns/code";
 @import "patterns/divider";
 @import "patterns/browser";
+@import "patterns/tags";
 //@import "patterns/button"; Not currently in use
 @import "patterns/header";
 @import "patterns/nav";
@@ -47,5 +48,9 @@
     }
     .content-box {
         margin-bottom: 1rem;
+    }
+
+    .heading {
+        margin-bottom: 0;
     }
 }
