@@ -2,9 +2,12 @@
 // Tags
 
 .tags {
-	margin-bottom: $base-spacing-unit;
+	margin-bottom: $base-spacing-unit / 2;
 
 	li {
-		
+		color: colour(neutral, 80);
+		border: 1px solid colour(neutral, 80);
+		border-radius: 2px;
+		padding: 0 4px;
 	}
 }

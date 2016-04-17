@@ -13,6 +13,17 @@
 		{% comment %} if the page has content (in the markdown file), output it in a content-box {% endcomment %}
 		{% if page.content != "" %}
 			<div class="content-box">
+
+				{% if page.path contains '_posts' %}
+					{% assign todays_date = site.time | date: "%y%m%d" %}
+					{% assign post_date = page.date | date: "%y%m%d" %}
+					{% capture cutoff_date %}{{ post_date | plus: 010000 }}{% endcapture %}
+
+					{% if todays_date > cutoff_date %}
+						<aside class="message message--neutral">This post was first published more than a year ago. It might be out of date. I've tried to update old posts as I've learnt more.</aside>
+					{% endif %}
+				{% endif %}
+
 				{{ content }}
 
 				{% comment %} if its a blog post, provide a link back to the blog home page {% endcomment %}

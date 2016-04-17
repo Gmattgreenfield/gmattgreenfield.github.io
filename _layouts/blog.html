@@ -19,20 +19,20 @@
 			</div>
 		</fieldset>
 
-			<div class="blog-summaries" id="js-search-results">
-				{% for post in site.posts %}<article class="" data-type="{{ post.type }}">
-					<div class="content-box">
-						<h1 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-						<ul class="tags list-reset list--inline">
-							<li>{{ post.type | capitalize }}</li>
-						</ul>
-						<blockquote>
-							{{ post.excerpt }}
-							<cite><a href="{{ post.url }}">Read More</a></cite>
-						</blockquote>
-					</div>
-				</article>{% endfor %}
-			</div>
+		<div class="blog-summaries" id="js-search-results">
+			{% for post in site.posts %}<article class="" data-type="{{ post.type }}">
+				<div class="content-box article-summary clearfix">
+					<h1 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+					<ul class="tags list-reset list--inline">
+						<li>{{ post.type | capitalize }}</li>
+					</ul>
+					{{ post.excerpt }}
+					<a href="{{ post.url }}" class="article-summary__more">Read More</a>
+				</div>
+			</article>{% endfor %}
+		</div>
+
+		{% include pattern-back-to-top.html %}
 
 	</main>
 

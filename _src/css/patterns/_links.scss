@@ -14,19 +14,19 @@ a {
 	text-decoration: underline;
 
 	&:hover {
-		// Opacity with legacy browser fallback. Just to make sure the link can be seen on different background colours
-		background-color: $body-background-color;
-		background-color: rgba($body-background-color, 0.6);
+		// Opacity with legacy browser fallback. Just to make sure the link can be seen on different background colour
+		background-color: colour(neutral);
+		background-color: colour(neutral, 10);
 	}
 }
 
 // Links in the main page content
 .content-box a {
 
-	color: $orange;
+	color: colour(primary);
 
 	&:visited {
-		color: $teal;
+		color: colour(secondary);
 	}
 }
 

@@ -1,0 +1,30 @@
+
+// Message
+
+.message {
+    border: 2px solid;
+    border-radius: 2px;
+    padding: $base-spacing-unit / 2;
+    margin-bottom: $base-spacing-unit / 2;
+
+    &.message--error {
+        background: colour(utility, error, 0.3);
+        border-color: colour(utility, error);
+    }
+
+    &.message--neutral {
+        background: colour(utility, neutral, 0.3);
+        border-color: colour(utility, neutral);
+    }
+
+    &.message--warning {
+        background: colour(utility, warning, 0.3);
+        border-color: colour(utility, warning);
+    }
+
+    &.message--success {
+        background: colour(utility, success, 0.3);
+        border-color: colour(utility, success);
+    }
+
+}

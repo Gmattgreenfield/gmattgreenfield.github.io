@@ -12,11 +12,9 @@
 
 		<!-- CSS -->
 		<!-- Critical CSS -->
-		{% if page.title == "Home" %}
+		{% if page.title == "About" %}
 			<style>{% include index-critical-css.html %}</style>
-		{% elsif page.url contains "/portfolio/" %}
-			<style>{% include portfolio-critical-css.html %}</style>
-		{% elsif page.path contains '_posts' or page.title == "Blog" %}
+		{% elsif page.path contains '_posts' or page.title == "Scratchpad" %}
 			<style>{% include blog-critical-css.html %}</style>
 		{% endif %}
 		<script>

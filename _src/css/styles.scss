@@ -1,12 +1,14 @@
 
 // Variables
 @import "variables/variables";
+@import "variables/colours";
 
 // Tools
 @import "tools/visuallyhidden";
 @import "tools/list-reset";
 @import "tools/img";
 @import "tools/utility";
+@import "tools/clearfix";
 @import "tools/font-size-mixin";
 @import "tools/media-query-mixin";
 
@@ -26,6 +28,7 @@
 @import "patterns/divider";
 @import "patterns/browser";
 @import "patterns/tags";
+@import "patterns/message";
 //@import "patterns/button"; Not currently in use
 @import "patterns/header";
 @import "patterns/nav";
@@ -46,11 +49,14 @@
         break-inside: avoid;
         padding-bottom: 1rem; // rework vertical rhythm to stop box-shadow overflowing columns
     }
-    .content-box {
-        margin-bottom: 1rem;
-    }
 
-    .heading {
-        margin-bottom: 0;
-    }
+}
+
+.article-summary {
+
+    margin-bottom: 1rem;
+}
+.article-summary__more {
+    float: right;
+
 }

@@ -1,0 +1,50 @@
+//
+// Colours
+//
+
+$colours: (
+    primary: (
+        base: #E6790E,
+    ),
+    secondary: (
+        base: #1D6976,
+    ),
+    neutral: (
+        0: #FFFFFF,
+        10: #F1F1EE,
+        20: #d2d2d2,
+
+        80: #777,
+        90: #555555,
+        100: #1C1C1C,
+    ),
+    utility: (
+        error: #E8320E,
+        warning: #FFAF0F,
+        success: #28751C,
+        neutral: #1C5A76
+    )
+);
+
+@function colour($colour, $tone: 'base', $opacity: 1) {
+    @if $colour == 'neutral' {
+        @if $tone == 'base' {
+            $tone: 20;
+        }
+    }
+    $hex: map-get(map-get($colours, $colour), $tone);
+
+    @return rgba($hex, $opacity);
+}
+
+
+
+// Handy names
+
+$teal: colour(secondary);
+$orange: colour(primary);
+
+$body-background-color: colour(neutral, 10);
+$body-text-color: colour(neutral, 100);
+$white: colour(neutral, 0);
+$grey: colour(neutral);

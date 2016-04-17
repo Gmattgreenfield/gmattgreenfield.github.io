@@ -110,17 +110,6 @@ gulp.task('penthouse', function() {
         console.log(err);
         fs.writeFile('../_includes/index-critical-css.html', criticalCss); // Write the contents to a jekyll include
     });
-	// portfolio
-	penthouse({
-		url : 'http://localhost:4000/portfolio/index.html',
-		css : '../_site/assets/css/styles.min.css',
-		width: 1920, // viewport width
-		height: 1080 // viewport height
-	}, function(err, criticalCss) {
-		// console.log(criticalCss);
-		console.log(err);
-		fs.writeFile('../_includes/portfolio-critical-css.html', criticalCss); // Write the contents to a jekyll include
-	});
 	// blog
 	penthouse({
 		url : 'http://localhost:4000/blog/index.html',
