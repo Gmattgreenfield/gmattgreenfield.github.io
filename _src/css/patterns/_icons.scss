@@ -5,9 +5,16 @@
 	display: block;
 	width: $base-icon-size + 10;
 	height: $base-icon-size;
+	background-size: contain;
+	background-repeat: no-repeat;
+	font-size: 0;
 }
-.icon__label {
-	@extend .visuallyhidden;
+
+// M: show the icon text
+.icon--show-label {
+	font-size: inherit;
+	width: auto;
+	padding-left: $base-icon-size + 10;
 }
 
 .icon--github {
@@ -18,4 +25,7 @@
 }
 .icon--email {
 	background-image: url("/assets/img/svg-icons/email.svg");
+}
+.icon--featured {
+	background-image: url("/assets/img/svg-icons/featured.svg");
 }

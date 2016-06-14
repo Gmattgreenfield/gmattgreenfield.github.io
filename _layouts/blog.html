@@ -10,7 +10,7 @@
 		<fieldset class="reset-fieldset content-box">
 			<legend class="visuallyhidden">Search posts</legend>
 			<label class="label" for="js-search-bar">Search</label>
-			<input type="text" class="text-input text-input--full" id="js-search-bar" name="search-bar">
+			<input type="text" class="text-input text-input--full" id="js-search-bar" name="search-bar" autofocus>
 			<div>
 				<input type="checkbox" id="js-posts-checkbox" checked>
 				<label class="label" for="js-posts-checkbox">Posts</label>
@@ -20,16 +20,9 @@
 		</fieldset>
 
 		<div class="blog-summaries" id="js-search-results">
-			{% for post in site.posts %}<article class="" data-type="{{ post.type }}">
-				<div class="content-box article-summary clearfix">
-					<h1 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-					<ul class="tags list-reset list--inline">
-						<li>{{ post.type | capitalize }}</li>
-					</ul>
-					{{ post.excerpt }}
-					<a href="{{ post.url }}" class="article-summary__more">Read More</a>
-				</div>
-			</article>{% endfor %}
+			{% for post in site.posts %}
+				{% include post-summary.html %}
+			{% endfor %}
 		</div>
 
 		{% include pattern-back-to-top.html %}

@@ -6,6 +6,15 @@
     margin-left: - $grid-gutter;
 }
 
+.grid--flex {
+	display: flex;
+
+	.grid__item--grow {
+		flex-grow: 1;
+	}
+
+}
+
 .grid__item {
 	display: inline-block;
 	padding-left: $grid-gutter;

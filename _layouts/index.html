@@ -8,6 +8,13 @@
 			{{ content }}
 		</div>
 
+		<aside class="blog-summaries">
+			{% assign featuredPosts = site.posts | where: "featured", "true" | limit: 3 %}
+			{% for post in featuredPosts %}
+				{% include post-summary.html %}
+			{% endfor %}
+		</aside>
+
 	</main>
 
 {% include footer.html %}

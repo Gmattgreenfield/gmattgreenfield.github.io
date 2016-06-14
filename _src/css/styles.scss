@@ -55,6 +55,19 @@
 .article-summary {
 
     margin-bottom: 1rem;
+    position: relative;
+
+    > .icon {
+        position: absolute;
+        top: $base-spacing-unit;
+        right: $base-spacing-unit;
+        font-size: 0;
+        width: $base-icon-size *2;
+        height: $base-icon-size *2;
+    }
+    > .icon + .heading {
+        margin-right: $base-icon-size;
+    }
 }
 .article-summary__more {
     float: right;
