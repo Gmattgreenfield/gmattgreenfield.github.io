@@ -5,16 +5,25 @@
 
 .style-guide__colour {
 
-    min-height: 5em;
-    border: 1px solid;
+    min-height: 12em;
+    outline: 1px solid;
+    border-bottom: 4em solid white;
     margin-bottom: 2em;
+    position: relative;
 
     &:before {
         content: attr(data-tone);
         display: block;
+        left: 1em;
     }
     &:after {
+        right: 1em;
+    }
+    &:after,
+    &:before {
+        position: absolute;
         display: block;
+        bottom: -2em;
     }
 }
 
@@ -68,7 +77,7 @@
     &[data-tone="100"] {
         background: colour(neutral, 100);
         &:after {
-            content: "#{olour(neutral, 100)}";
+            content: "#{colour(neutral, 100)}";
         }
     }
 
