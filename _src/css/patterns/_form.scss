@@ -1,20 +1,23 @@
 
 // Form input styles
 
+.text-input,
+.checkbox {
+    background: colour(neutral, 10);
+    border-radius: 2px;
+    border: 2px solid colour(neutral, 90);
+}
+
 .text-input {
     display: block;
     padding: $base-spacing-unit / 4;
-    border: 2px solid colour(neutral, 90);
-    border-radius: 2px;
     font-size: inherit;
     margin-bottom: $base-spacing-unit / 2;
-    background: colour(neutral, 10);
 
     &:focus {
         outline: none;
         background: colour(neutral, 0);
     }
-
 
     &--full {
         width: 100%;
@@ -28,4 +31,24 @@
 
 .reset-fieldset {
     border: none;
+}
+
+
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 2em;
+    height: 2em;
+
+    &,
+    + label {
+        vertical-align: middle;
+    }
+
+    &:checked {
+        background: colour(neutral, 0);
+        background-image: url("/assets/img/svg-icons/tick.svg");
+        background-size: cover;
+    }
 }
