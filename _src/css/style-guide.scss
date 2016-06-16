@@ -4,9 +4,102 @@
 @import "variables/colours";
 
 .style-guide__colour {
-    display: block;
+
     min-height: 5em;
     border: 1px solid;
+    margin-bottom: 2em;
 
+    &:before {
+        content: attr(data-tone);
+        display: block;
+    }
+    &:after {
+        display: block;
+    }
+}
+
+
+[data-pallete="primary"] {
+    background: colour(primary);
+    &:after {
+        content: "#{colour(primary)}";
+    }
+}
+
+[data-pallete="secondary"] {
+    background: colour(secondary);
+    &:after {
+        content: "#{colour(secondary)}";
+    }
+}
+
+[data-pallete="neutral"] {
+
+    &[data-tone="0"] {
+        background: colour(neutral, 0);
+        &:after {
+            content: "#{colour(neutral, 0)}";
+        }
+    }
+    &[data-tone="10"] {
+        background: colour(neutral, 10);
+        &:after {
+            content: "#{colour(neutral, 10)}";
+        }
+    }
+    &[data-tone="20"] {
+        background: colour(neutral, 20);
+        &:after {
+            content: "#{colour(neutral, 20)}";
+        }
+    }
+    &[data-tone="80"] {
+        background: colour(neutral, 80);
+        &:after {
+            content: "#{colour(neutral, 80)}";
+        }
+    }
+    &[data-tone="90"] {
+        background: colour(neutral, 90);
+        &:after {
+            content: "#{colour(neutral, 90)}";
+        }
+    }
+    &[data-tone="100"] {
+        background: colour(neutral, 100);
+        &:after {
+            content: "#{olour(neutral, 100)}";
+        }
+    }
+
+}
+
+
+[data-pallete="utility"] {
+
+    &[data-tone="error"] {
+        background: colour(utility, error);
+        &:after {
+            content: "#{colour(utility, error)}";
+        }
+    }
+    &[data-tone="warning"] {
+        background: colour(utility, warning);
+        &:after {
+            content: "#{colour(utility, warning)}";
+        }
+    }
+    &[data-tone="success"] {
+        background: colour(utility, success);
+        &:after {
+            content: "#{colour(utility, success)}";
+        }
+    }
+    &[data-tone="neutral"] {
+        background: colour(utility, neutral);
+        &:after {
+            content: "#{colour(utility, neutral)}";
+        }
+    }
 
 }
