@@ -1,17 +1,25 @@
 
 // Logo
 
-$logo-height: 140px;
+$logo-height: 180px;
 $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 
 .logo {
 
+	// Typography
+	font-size: 32px;
+	text-decoration: none;
+	line-height: 1;
+
+	// Position the text
+	padding-top: 70px;
+	padding-left: 25px;
+
 	display: inline-block;
 	width: 190px;
 	height: $logo-height;
-	background-repeat: no-repeat;
 
-	position: relative; // To position the content
+	position: relative; // To position the pseudo elements
 
 	// put the logo under the header and centered on palm
 	@include media-query(palm) {
@@ -23,58 +31,41 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 
 	}
 
-	&__initials {
-		text-align: center;
-		z-index: 1;
-		width: 100%;
-		margin-top: 10px;
-	}
-
-	&__name {
+	// The grey trapeze shaped background
+	&:before,
+	&:after {
+		content: "";
 		display: block;
-		width: 100%;
-		text-align: center;
-		margin-top: 80px;
-		font-weight: bold;
-		color: $teal;
+		position: absolute;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
+
+		// Hide it when we're scrolling
+		.scrolling-down & {
+			top: - $logo-height;
+			bottom: 0;
+		}
 	}
 
-}
-
-.logo__box,
-.logo__initials,
-.logo__name {
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	// Hide it when we're scrolling
-	.scrolling-down & {
-		top: - $logo-height;
+	// Make each one look a little different
+	&:before {
+		background-image: url("../img/logo/fill.svg");
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transition: top .8s $animate-bounce $header-animate-time,
+					bottom .8s $animate-bounce $header-animate-time;
 	}
-}
+	&:after {
+		background-image: url("../img/logo/border.svg");
+		top: 15px;
+		left: 13px;
+		right: -13px;
+		bottom: -15px;
+		transition: top 1s $animate-bounce $header-animate-time,
+					bottom 1s $animate-bounce $header-animate-time;
+	}
 
-.logo__box {
-	z-index: -1;
-}
-.logo__box--one {
-	left: 14px;
-	top: -78px;
-}
-.logo__box--two {
-	top: -87px;
-}
-
-
-
-
-// Animations
-// Scroll the 2 svg's in at differnt timings. set a delay so it starts just as the header is almost in position
-.logo__box--one,
-.logo__initials,
-.logo__name {
-	transition: top .8s $animate-bounce $header-animate-time;
-}
-.logo__box--two {
-	transition: top 1s $animate-bounce $header-animate-time;
 }

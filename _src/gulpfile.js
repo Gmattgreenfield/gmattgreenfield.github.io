@@ -125,13 +125,9 @@ gulp.task('penthouse', function() {
 
 // Task: Optimize Images
 gulp.task('images', function () {
-    return gulp.src('../assets/img/**')
-	.pipe(imagemin({
-		progressive: true,
-		svgoPlugins: [{removeViewBox: false}],
-		use: [pngquant(), jpegtran(), optipng(), gifsicle()]
-	}))
-	.pipe(gulp.dest('../assets/img/'));
+    return gulp.src('images/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('../assets/img/'))
 });
 
 // Task: a11y
