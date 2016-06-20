@@ -3,15 +3,13 @@
 $billboard-background: rgba($grey, 0.7);
 
 .billboard {
-	max-width: 800px;
-	margin: auto;
-	font-size: 2.3rem;
+	margin: 0 auto;
+	font-size: 2.1rem;
 	line-height: 1.73;
-	margin-bottom: $base-spacing-unit * 4;
 	display:inline;
 	background-color: $billboard-background;
 	outline: 10px solid $billboard-background;
-	border-bottom: 13px solid transparent;
+	border-bottom: .4em solid transparent;
 
 	p {
 		margin-bottom: 0;

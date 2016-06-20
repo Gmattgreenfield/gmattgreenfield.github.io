@@ -37,6 +37,8 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		content: "";
 		display: block;
 		position: absolute;
+		height: $logo-height;
+		width: 190px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		z-index: -1;
@@ -53,19 +55,13 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		background-image: url("../img/logo/fill.svg");
 		top: 0;
 		left: 0;
-		right: 0;
-		bottom: 0;
-		transition: top .8s $animate-bounce $header-animate-time,
-					bottom .8s $animate-bounce $header-animate-time;
+		transition: top .8s $animate-bounce $header-animate-time;
 	}
 	&:after {
 		background-image: url("../img/logo/border.svg");
-		top: 15px;
-		left: 13px;
-		right: -13px;
-		bottom: -15px;
-		transition: top 1s $animate-bounce $header-animate-time,
-					bottom 1s $animate-bounce $header-animate-time;
+		top: 10px;
+		left: 10px;
+		transition: top 1s $animate-bounce $header-animate-time;
 	}
 
 }

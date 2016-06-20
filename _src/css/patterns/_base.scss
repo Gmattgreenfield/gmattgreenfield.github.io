@@ -17,17 +17,17 @@ body * {
 
 body {
 
-	background-image:
-		url("/assets/img/triangle--orange.svg"),
-		url("/assets/img/triangle--green.svg"),
-		url("/assets/img/triangle--blue.svg"),
-	;
-	background-position:
-		right 0 top 40px, // 40px offset from the top
-		50%,
-		right 0px bottom ($footer-height - 3); // offset from the bottom by the footer height
-	background-size: contain;
-	background-repeat: no-repeat;
+	// background-image:
+	// 	url("/assets/img/triangle--orange.svg"),
+	// 	url("/assets/img/triangle--green.svg"),
+	// 	url("/assets/img/triangle--blue.svg"),
+	// ;
+	// background-position:
+	// 	right 0 top 40px, // 40px offset from the top
+	// 	50%,
+	// 	right 0px bottom ($footer-height - 3); // offset from the bottom by the footer height
+	// background-size: contain;
+	// background-repeat: no-repeat;
 	background-color: $body-background-color;
 
 	margin: 0;
@@ -37,16 +37,42 @@ body {
 	font-size: $base-font-size;
 	line-height: 1.6;
 	color: $body-text-color;
+
+	// flexbox sticky footer
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+
+	// The diagonals
+	position: relative;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		width: 120vw;
+		margin-left: -10vw;
+		position: absolute;
+		z-index: -1;
+
+	}
+	&:before {
+		background: colour(primary);
+		transform: rotate(16deg);
+		height: 500px;
+		top: -200px;
+	}
+
+	&:after {
+		background: colour(secondary);
+		transform: rotate(-8deg);
+		bottom: 145px;
+	    height: 270px;
+	}
 }
 
 
-// flexbox sticky footer
-// TODO: remove $footer-height, flexbox should deal with that
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
 
 .page-content {
   flex: 1;

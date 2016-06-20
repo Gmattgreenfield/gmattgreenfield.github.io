@@ -3,17 +3,11 @@
 
 .footer {
 
-	height: $footer-height;
 	background: $teal;
 
 	.inner-constraint {
-		margin-top: 2rem;
-	}
-
-	.contact-icons {
-		img {
-			width: 40px;
-		}
+		margin-top: $base-spacing-unit;
+		margin-bottom: $base-spacing-unit;
 	}
 
 	a {
