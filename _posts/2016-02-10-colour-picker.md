@@ -4,7 +4,6 @@ slug: colour-picker
 display-order: 3
 published: true
 type: portfolio
-featured: true
 ---
 
 Challenged with creating a colour picker that doesn't allow for poor colour choices, and a weekend at home alone, I wireframed and prototyped this concept based on "colour collections".

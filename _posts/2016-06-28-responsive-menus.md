@@ -1,17 +1,19 @@
 ---
 title: Responsive Menus in a CMS
+type: blog
+excerpt: My attempt at solving the problem of long site navigation menus on small screens.
 ---
 
 In my day to day job I work at [Create](www.create.net), a CMS used by thousands of people.
 
-We have a problem - users can add as many items to thier website navigation as they like, and there's not always room for that many menu items.
+We have a problem - users can add as many items to their website navigation as they like, and there's not always room for that many menu items.
 So we need to educate the users on making a site navigation that is user friendly and... fits.
 
-The first one isn't so hard, educating customers in best practices is part of what the company does. 
+The first one isn't so hard, educating customers in best practices is part of what the company does.
 But how do you make an object fit inside another when that other object can change in size?!
 
 We've started playing around with javascript to move items that don't fit in to a "More" dropdown.
-It's becoming a more and more popular design pattern and I really like it. It can reduce the need for humburger toggled menus or certainly reduce the viewport width at which they are triggerd.
+It's becoming a more and more popular design pattern and I really like it. It can reduce the need for hamburger toggled menus or certainly reduce the viewport width at which they are triggered.
 [The Guardian](https://www.theguardian.com/uk) are the masters of this.
 
 
@@ -24,7 +26,7 @@ It's becoming a more and more popular design pattern and I really like it. It ca
 
 ## Output
 
-Here's what I've got so far (getting widths of flexbox elements with javascript seems tempremental on iOS devices.);
+Here's what I've got so far (getting widths of flexbox elements with javascript seems temperamental on iOS devices.);
 
 ### HTML
 ``` html

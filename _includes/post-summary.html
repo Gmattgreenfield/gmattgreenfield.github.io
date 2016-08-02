@@ -3,7 +3,7 @@
         {% if post.featured == true %}<span class="icon icon--featured">Featured</span>{% endif %}
         <h1 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
         <ul class="tags list-reset list--inline">
-            <li>{{ post.type | capitalize }}</li>
+            <li class="tag tag--{{post.type}}">{{ post.type | capitalize }}</li>
         </ul>
         {{ post.excerpt }}
         <a href="{{ post.url }}" class="article-summary__more">Read More</a>
