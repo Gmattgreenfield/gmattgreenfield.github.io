@@ -55,7 +55,7 @@ footer:before {
 	position: absolute;
 	z-index: -1;
 
-	height: $triangleAspectY * 1vw;
+	height: calc( #{$triangleAspectY}vw - .5px);
 	width: $triangleAspectX * 1%;
 
 	background-repeat: no-repeat;

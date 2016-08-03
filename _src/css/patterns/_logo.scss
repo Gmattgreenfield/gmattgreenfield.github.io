@@ -29,6 +29,10 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 		transform: translateX(-50%);
 		z-index: -2;
 
+		.scrolling-down & {
+			top: - $logo-height;
+		}
+
 	}
 
 	// The grey trapeze shaped background
