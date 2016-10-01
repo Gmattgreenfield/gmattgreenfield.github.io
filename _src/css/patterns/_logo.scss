@@ -35,6 +35,21 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 
 	}
 
+	// The underline
+	span {
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 4px;
+			height: 8px;
+			width: 100%;
+			z-index: -1;
+			background: colour(primary);
+		}
+	}
+
 	// The grey trapeze shaped background
 	&:before,
 	&:after {

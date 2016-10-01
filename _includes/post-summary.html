@@ -1,10 +1,15 @@
 <article class="" data-type="{{ post.type }}">
     <div class="content-box article-summary clearfix">
+        {% if post.image %}
+            <a href="{{ post.url }}">
+                <img src="/assets/img/{{post.image}}.jpg" alt="Screenshot of {{ post.title }}">
+            </a>
+        {% endif %}
         {% if post.featured == true %}<span class="icon icon--featured">Featured</span>{% endif %}
-        <h1 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <ul class="tags list-reset list--inline">
+        <h2 class="heading heading--gamma"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <!-- <ul class="tags list-reset list--inline">
             <li class="tag tag--{{post.type}}">{{ post.type | capitalize }}</li>
-        </ul>
+        </ul> -->
         {{ post.excerpt }}
         <a href="{{ post.url }}" class="article-summary__more">Read More</a>
     </div>

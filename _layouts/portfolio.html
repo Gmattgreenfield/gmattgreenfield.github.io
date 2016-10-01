@@ -1,0 +1,24 @@
+{% include head.html %}
+
+{% include header.html %}
+
+
+	<main class="inner-constraint page-content">
+
+		<h1 class="heading heading--alpha">{{ page.title }}</h1>
+
+		<div class="blog-summaries" id="js-search-results">
+			{% assign posts = site.portfolio | sort: 'display-order' %}
+			{% for post in posts %}
+				{% include post-summary.html %}
+			{% endfor %}
+		</div>
+
+		{% include pattern-back-to-top.html %}
+
+	</main>
+
+
+{% include footer.html %}
+
+{% include foot.html %}

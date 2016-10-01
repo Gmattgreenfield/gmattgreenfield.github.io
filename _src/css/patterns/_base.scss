@@ -35,14 +35,19 @@ body {
 	// For the diagonals
 	position: relative;
 
+	background-image:
+    linear-gradient(
+      to bottom,
+      colour(primary),
+      colour(primary) 110px,
+      transparent 110px,
+      transparent 100%
+    );
 
 }
 
 //
 // The diagnol backgrounds
-
-$triangleAspectX: 100;
-$triangleAspectY: 15;
 
 footer {
 	position: relative;
@@ -54,27 +59,22 @@ footer:before {
 	display: block;
 	position: absolute;
 	z-index: -1;
-
-	height: calc( #{$triangleAspectY}vw - .5px);
-	width: $triangleAspectX * 1%;
-
-	background-repeat: no-repeat;
-	background-size: cover;
-
+	width: 100%;
+	left: 0;
 }
 
 body:before {
-	background-image:
-		url("data:image/svg+xml;utf8, <svg viewBox='0 0 #{$triangleAspectX} #{$triangleAspectY}' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polygon fill='#{$body-background-color}' points='0,#{$triangleAspectY} #{$triangleAspectX},#{$triangleAspectY} 0,0'></polygon></svg>");
 	background-color: colour(primary);
 	top: 0;
+	height: 20vh;
+	transform: skewY(6deg);
 }
 
 footer:before {
-	background-image:
-		url("data:image/svg+xml;utf8, <svg viewBox='0 0 #{$triangleAspectX} #{$triangleAspectY}' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polygon fill='#{$body-background-color}' points='0,#{$triangleAspectY} #{$triangleAspectX},0 0,0'></polygon></svg>");
 	background-color: colour(secondary);
-	bottom: 100%;
+	top: -10vw;
+    height: 30vh;
+	transform: skewY(173deg);
 }
 
 

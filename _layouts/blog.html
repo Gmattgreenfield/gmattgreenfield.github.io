@@ -5,22 +5,11 @@
 
 	<main class="inner-constraint page-content">
 
-		<h1 class="heading">{{ page.title }}</h1>
-
-		<fieldset class="reset-fieldset content-box">
-			<legend class="visuallyhidden">Search posts</legend>
-			<label class="label" for="js-search-bar">Search</label>
-			<input type="text" class="text-input text-input--full" id="js-search-bar" name="search-bar" autofocus>
-			<div>
-				<input type="checkbox" class="checkbox" id="js-posts-checkbox" checked>
-				<label class="label" for="js-posts-checkbox">Posts</label>
-				<input type="checkbox" class="checkbox" id="js-portfolio-checkbox" checked>
-				<label class="label" for="js-portfolio-checkbox">Portfolio</label>
-			</div>
-		</fieldset>
+		<h1 class="heading heading--alpha">{{ page.title }}</h1>
 
 		<div class="blog-summaries" id="js-search-results">
-			{% for post in site.posts %}
+			{% assign posts = site.posts %}
+			{% for post in posts %}
 				{% include post-summary.html %}
 			{% endfor %}
 		</div>
@@ -29,31 +18,5 @@
 
 	</main>
 
-
 {% include footer.html %}
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.8.0/jets.min.js"></script>
-<script>
-	// Set up the 'jets' plugin
-	var jets = new Jets({
-		searchTag: '#js-search-bar',
-		contentTag: '#js-search-results'
-	});
-
-	// Show/Hide on checkbox click
-	var portfolioItems = document.querySelectorAll('[data-type="portfolio"]');
-	var blogItems = document.querySelectorAll('[data-type="blog"]');
-	var postsCheckbox = document.getElementById('js-posts-checkbox');
-	var portfolioCheckbox = document.getElementById('js-portfolio-checkbox');
-
-	function showHide(type){
-		for(i = 0; i < type.length; i++){
-			type[i].classList.toggle("visuallyhidden");
-		}
-	}
-
-	postsCheckbox.addEventListener("change", function(){showHide(blogItems);}, false);
-	portfolioCheckbox.addEventListener("change", function(){showHide(portfolioItems);}, false);
-</script>
-
 {% include foot.html %}

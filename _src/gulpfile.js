@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 
     // Image optimizing
     imagemin = require('gulp-imagemin'),
+    gm = require('gulp-gm'),
     // pngquant = require('imagemin-pngquant'),
     // jpegtran = require('imagemin-jpegtran'),
     // gifsicle = require('imagemin-gifsicle'),
@@ -28,7 +29,7 @@ var gulp = require('gulp'),
 
     // Error handling, hmmmm.....
     // notify = require("gulp-notify"),
-    // plumber = require('gulp-plumber'),
+    plumber = require('gulp-plumber'),
 
     // Critical Path CSS
     penthouse = require('penthouse'), // For creating the critical path css
@@ -119,16 +120,28 @@ gulp.task('penthouse', function() {
 	}, function(err, criticalCss) {
 		// console.log(criticalCss);
 		console.log(err);
-		fs.writeFile('../_includes/blog-critical-css.html', criticalCss); // Write the contents to a jekyll include
+		fs.writeFile('../_includes/posts-critical-css.html', criticalCss); // Write the contents to a jekyll include
 	});
 });
 
-// Task: Optimize Images
-gulp.task('images', function () {
-    return gulp.src('images/**')
-        .pipe(imagemin())
-        .pipe(gulp.dest('../assets/img/'))
+
+// Task: Images
+
+gulp.task('makeJpg', function () {
+    gulp.src('images/**/*.png')
+    .pipe(plumber())
+    .pipe(gm(function (gmfile) {
+        return gmfile.setFormat('jpg');
+    }))
+    .pipe(gulp.dest('images/'))
 });
+gulp.task('imageOptim', function () {
+    gulp.src('images/**/*.jpg')
+    .pipe(imagemin())
+    .pipe(gulp.dest('../assets/img/'))
+});
+
+gulp.task('images', ['makeJpg', 'imageOptim']);
 
 // Task: a11y
 gulp.task('a11y', function () {

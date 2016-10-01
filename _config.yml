@@ -5,6 +5,8 @@ domain: mattgreenfield.co.uk
 collections:
   style-guide:
     output: false
+  portfolio:
+    output: true
 
 defaults:
   -

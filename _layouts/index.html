@@ -8,16 +8,6 @@
 			{{ content }}
 		</div>
 
-		<aside class="util-m-t-3">
-			<h1 class="heading heading--alpha">Highlights from the <a href="/blog/">Scratchpad</a></h1>
-			<div class="blog-summaries">
-				{% assign featuredPosts = site.posts | where: "featured", "true" | limit: 3 %}
-				{% for post in featuredPosts %}
-					{% include post-summary.html %}
-				{% endfor %}
-			</div>
-		</aside>
-
 	</main>
 
 {% include footer.html %}
