@@ -51,6 +51,14 @@
 
 }
 
+hr.divider {
+    margin: 0;
+    margin-bottom: $base-spacing-unit;
+    border: 1px solid currentColor;
+    opacity: .4;
+
+}
+
 .article-summary {
 
     margin-bottom: 1rem;

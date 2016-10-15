@@ -1,7 +1,11 @@
 
 // Images
 
+svg,
 img {
 	max-width: 100%;
 	height: auto;
+
+	// because of how we're using critical path CSS - see includes/head.html
+	opacity: 1;
 }

@@ -45,10 +45,6 @@ body * {
 body {
   background-color: #f1f1ee;
   margin: 0;
-  font-family: Roboto,sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #1c1c1c;
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
@@ -94,7 +90,7 @@ body:before {
 }
 
 body>.inner-constraint {
-  margin-top: 12.72rem;
+  margin-top: 220px;
 }
 
 @media only screen and (max-width:669px) {
@@ -103,13 +99,22 @@ body>.inner-constraint {
   }
 }
 
+@font-face {
+  font-family: ridley_groteskbold;
+  src: url(../fonts/ridleygrotesk-bold-webfont.woff2) format("woff2"),url(../fonts/ridleygrotesk-bold-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .heading,
 h1,
 h2 {
+  font-family: ridley_groteskbold,Roboto,sans-serif;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: .34em;
   line-height: 1.3;
+  display: block;
 }
 
 .heading--alpha {
@@ -123,6 +128,13 @@ h1 {
 .heading--gamma,
 h2 {
   font-size: 1.6em;
+}
+
+body {
+  font-family: Roboto,sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #1c1c1c;
 }
 
 p {
@@ -146,19 +158,6 @@ a {
   text-decoration: none;
   color: inherit;
   font-weight: 400;
-}
-
-.icon {
-  display: block;
-  width: 40px;
-  height: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  font-size: 0;
-}
-
-.icon--featured {
-  background-image: url(../img/icons/featured.svg);
 }
 
 .tags {
@@ -247,14 +246,15 @@ a {
 }
 
 .logo {
+  font-family: ridley_groteskbold;
   font-size: 32px;
   text-decoration: none;
   line-height: 1;
   padding-top: 70px;
   padding-left: 25px;
   display: inline-block;
-  width: 190px;
-  height: 180px;
+  width: 210px;
+  height: 200px;
   position: relative;
 }
 
@@ -278,8 +278,8 @@ a {
   content: "";
   display: block;
   position: absolute;
-  height: 180px;
-  width: 190px;
+  height: 200px;
+  width: 210px;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -313,19 +313,6 @@ a {
 .article-summary {
   margin-bottom: 1rem;
   position: relative;
-}
-
-.article-summary>.icon {
-  position: absolute;
-  top: 1.92rem;
-  right: 1.92rem;
-  font-size: 0;
-  width: 60px;
-  height: 60px;
-}
-
-.article-summary>.icon+.heading {
-  margin-right: 30px;
 }
 
 .article-summary__more {

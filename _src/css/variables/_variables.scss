@@ -14,8 +14,10 @@ $base-spacing-unit: $base-font-size * $base-line-height;
 
 $grid-gutter: $base-spacing-unit;
 
-$header-height: $base-font-size * 9;
-$logo-height: 180px;
+
+$logo-height: 200px;
+$logo-width: 210px;
+$header-height: $logo-height + 20px;
 
 
 // Breakpoint Widths

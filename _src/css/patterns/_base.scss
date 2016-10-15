@@ -20,12 +20,6 @@ body {
 	background-color: $body-background-color;
 	margin: 0;
 
-	// Typography
-	font-family: 'Roboto', sans-serif;
-	font-size: $base-font-size;
-	line-height: 1.6;
-	color: $body-text-color;
-
 	// flexbox sticky footer
 	display: flex;
 	min-height: 100vh;
@@ -94,7 +88,8 @@ footer:before {
 }
 
 body > .inner-constraint {
-	margin-top: $header-height + $base-spacing-unit;
+	margin-top: $header-height;
+	margin-bottom: $base-spacing-unit;
 
 	@include media-query(palm) {
 		margin-top: 250px;

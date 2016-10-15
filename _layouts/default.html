@@ -32,8 +32,23 @@
 				{% endif %}
 			</div>
 		{% endif %}
+		<div class="grid">
+			<div class="grid__item one-half">
+				{% if page.next.url %}
+					<span class="heading heading--zeta">Previous</span>
+					<a class="next" href="{{page.next.url}}"> &laquo; {{page.next.title}}</a>
+				{% endif %}
+			</div>
+			<div class="grid__item one-half util-text-right">
+				{% if page.previous.url %}
+					<span class="heading heading--zeta">Next</span>
+					<a class="prev" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+				{% endif %}
+			</div>
+		</div>
 
 	{% if page.path contains '_posts' %}
+			<a href="/blog/" class="util-float-right">Blog Home</a>
 		</article>
 	{% else %}
 		</main>
