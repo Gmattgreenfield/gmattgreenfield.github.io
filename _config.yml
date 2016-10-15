@@ -1,6 +1,8 @@
 
 author: Matt Greenfield
 domain: mattgreenfield.co.uk
+about: I'm Matt, a front end developer and web designer from Brighton, UK.I’m currently working for <a href="https://www.create.net/" target="_blank" class="text-emphasis">create.net</a>. I’m big on responsive and style guide based design. I also enjoy <a href="http://thebluesissue.co.uk/" target="_blank" class="text-emphasis">drumming</a>.</p>
+
 
 collections:
   style-guide:
@@ -17,3 +19,15 @@ defaults:
 
 # Serving
 port: 1234
+
+
+skills:
+  - CSS
+  - Sass
+  - HTML5
+  - Javascript
+  - Git
+  - jQuery
+  - Accessibility
+  - SVG
+  - Jekyll

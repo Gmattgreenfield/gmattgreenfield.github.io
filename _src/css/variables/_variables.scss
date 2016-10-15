@@ -15,6 +15,7 @@ $base-spacing-unit: $base-font-size * $base-line-height;
 $grid-gutter: $base-spacing-unit;
 
 $header-height: $base-font-size * 9;
+$logo-height: 180px;
 
 
 // Breakpoint Widths
@@ -26,3 +27,8 @@ $desk-start:        1024px;
 $animation-time-fast: .3s;
 $animation-time-med: .8s;
 $animation-time-slow: 1.5s;
+
+
+
+
+$animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);

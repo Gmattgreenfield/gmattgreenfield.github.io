@@ -20,7 +20,39 @@ $header-animate-time: $animation-time-fast;
 	// Reverse the display order on tablet and up
 	.logo {
 		float: left;
+
+		// put the logo under the header and centered on palm
+		@media (max-width: 710px) {
+			position: absolute;
+			top: 75px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: -2;
+
+			.scrolling-down & {
+				top: - $logo-height;
+			}
+
+		}
 	}
+
+	.nav {
+
+		float: right;
+		@media (max-width: 710px) {
+			float: none;
+			display: block;
+			margin-left: 0;
+			> ul {
+				display: flex;
+			}
+			li {
+				flex: 1;
+			    text-align: center;
+			}
+		}
+	}
+
 }
 
 // The slanted white box

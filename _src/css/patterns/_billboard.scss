@@ -5,18 +5,112 @@ $billboard-background: rgba($grey, 0.7);
 .billboard {
 	margin: 0 auto;
 	font-size: 2.1rem;
-	line-height: 1.73;
-	display:inline;
-	background-color: $billboard-background;
-	outline: 10px solid $billboard-background;
-	border-bottom: .4em solid transparent;
-
-	p {
+	line-height: 1.78;
+	text-align: center;
+	h1 {
+		font-size: 3em;
 		margin-bottom: 0;
-		display: inline;
+	}
+}
+
+.page-content {
+
+}
+
+@keyframes rotate360 {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359deg);}
+}
+@keyframes rotate20 {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(20deg);}
+}
+@keyframes rotate90 {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(90deg);}
+}
+
+
+@keyframes grow200 {
+    from {transform:scale(0);}
+    to {transform:scale(200%);}
+}
+
+@keyframes show {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.animation-svg {
+	display: inline-block;
+}
+
+.svg-record:hover {
+
+	#grooves {
+		transform-origin: center;
+		animation: rotate360 .8s infinite linear;
 	}
 
-	a {
-		color: colour(secondary);
+	#arm {
+		animation: rotate20 .8s 1 linear;
+		transform-origin: top;
+		animation-fill-mode: forwards;
 	}
+}
+
+
+.svg-speaker {
+	float: right;
+	margin-top: 90px;
+
+	&:hover #waves {
+		transform-origin: center;
+		animation: grow200 .4s infinite linear;
+	}
+}
+
+
+.svg-lamp {
+	position: absolute;
+	top: 200px;
+	right: 30px;
+
+	.darkness {
+		opacity: 0;
+		transition: opacity 0s ease-in;
+		width: 0;
+		> svg {
+			height: 0;
+		}
+	}
+
+	> svg:hover {
+		position: relative;
+		+ .darkness {
+			transition: opacity 1s ease-in;
+			pointer-events: none;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			width: 100%;
+			z-index: 200;
+			background: #1C1C1C;
+			opacity: .9;
+			> svg {
+				position: absolute;
+				top: 236px;
+				right: 98px;
+				z-index: 201;
+				height: auto;
+			}
+		}
+	}
+
+}
+
+svg {
+	overflow: visible;
 }

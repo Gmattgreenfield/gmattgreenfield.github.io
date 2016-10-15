@@ -1,9 +1,6 @@
 
 // Logo
 
-$logo-height: 180px;
-$animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
-
 .logo {
 
 	// Typography
@@ -20,20 +17,6 @@ $animate-bounce: cubic-bezier(0.85, 0.59, 0.56, 1.55);
 	height: $logo-height;
 
 	position: relative; // To position the pseudo elements
-
-	// put the logo under the header and centered on palm
-	@include media-query(palm) {
-		position: absolute;
-		top: 75px;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: -2;
-
-		.scrolling-down & {
-			top: - $logo-height;
-		}
-
-	}
 
 	// The underline
 	span {

@@ -7,11 +7,14 @@
 
 		<h1 class="heading heading--alpha">{{ page.title }}</h1>
 
-		<div class="blog-summaries" id="js-search-results">
-			{% assign posts = site.posts %}
-			{% for post in posts %}
-				{% include post-summary.html %}
-			{% endfor %}
+		<div class="grid">
+			<div class="grid__item">
+				{% assign posts = site.posts %}
+				{% for post in posts %}
+					{% include post-summary.html %}
+				{% endfor %}
+			</div>
+			<div class="grid__item"></div>
 		</div>
 
 		{% include pattern-back-to-top.html %}

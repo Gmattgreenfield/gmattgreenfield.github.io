@@ -2,25 +2,35 @@
 
 	<div class="inner-constraint">
 
-		<h2 class="heading heading--beta">Find me and follow me</h2>
-		<ul class="list-reset list--inline util-m-b-1">
-			<li>
-				<a href="https://twitter.com/mattgreenfield2" class="icon icon--show-label icon--twitter">@mattgreenfield2</a>
-			</li>
-			<li>
-				<a href="https://github.com/mattgreenfield" class="icon icon--show-label icon--github">/mattgreenfield</a>
-			</li>
-			<li>
-				<a href="mailto:gmattgreenfield@gmail.com" class="icon icon--show-label icon--email">gmattgreenfield@gmail.com</a>
-			</li>
-		</ul>
+		<h2 class="heading heading--beta">About Me</h2>
 
-		<section class="print-hide">
-			<h2 class="heading heading--beta">About this site.</h2>
-			<p>This site is built with Jekyll and hosted on Github Pages. It uses Google Fonts, was designed with Sketch and built with Atom and Sass. Why not check out the <a href="/style-guide/">style guide</a>.</p>
+		<div class="grid">
+			<div class="grid__item two-thirds">
+				<p>{{ site.about }}</p>
+			</div>
+			<div class="grid__item one-third">
+				<ul class="list-reset util-m-b-1">
+					<li>
+						Follow me on twitter
+						<a href="https://twitter.com/mattgreenfield2" class="">@mattgreenfield2</a>
+					</li>
+					<li>
+						View my code on github
+						<a href="https://github.com/mattgreenfield" class="">/mattgreenfield</a>
+					</li>
+					<li>
+						Send me an email
+						<a href="mailto:gmattgreenfield@gmail.com" class="">gmattgreenfield@gmail.com</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<section>
+			<p>This site is built with Jekyll and hosted on Github Pages. <a href="https://github.com/mattgreenfield/mattgreenfield.github.io">View the source code.</a> <a href="/style-guide/">View the pattern library</a>.</p>
 		</section>
 
-		<small>Copyright Matt Greenfield 2015.</small>
+		<small>copyright  © {{ site.time | date: '%Y' }} Matt Greenfield.</small>
 
 	</div><!-- end inner constraint -->
 

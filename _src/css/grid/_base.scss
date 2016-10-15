@@ -4,6 +4,7 @@
     margin:  0;
     padding: 0;
     margin-left: - $grid-gutter;
+	font-size: 0;
 }
 
 .grid--flex {
@@ -20,4 +21,5 @@
 	padding-left: $grid-gutter;
 	vertical-align: top;
 	width: 100%;
+	font-size: $base-font-size;
 }

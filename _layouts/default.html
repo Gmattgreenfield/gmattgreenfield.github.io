@@ -8,6 +8,7 @@
 		<main class="inner-constraint page-content">
 	{% endif %}
 
+		<span>{{ page.collection | capitalize }}</span>
 		<h1 class="page__title heading heading--alpha">{{ page.title }}</h1>
 
 		{% comment %} if the page has content (in the markdown file), output it in a content-box {% endcomment %}

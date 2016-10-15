@@ -10,6 +10,21 @@
   clear: both;
 }
 
+.grid {
+  list-style: none;
+  margin: 0 0 0 -1.92rem;
+  padding: 0;
+  font-size: 0;
+}
+
+.grid__item {
+  display: inline-block;
+  padding-left: 1.92rem;
+  vertical-align: top;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -146,6 +161,10 @@ a {
   background-image: url(../img/icons/featured.svg);
 }
 
+.tags {
+  margin-bottom: .96rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -156,6 +175,40 @@ a {
 
 .header .logo {
   float: left;
+}
+
+@media (max-width:710px) {
+  .header .logo {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -2;
+  }
+}
+
+.header .nav {
+  float: right;
+}
+
+@media (max-width:710px) {
+  .header .nav {
+    float: none;
+    display: block;
+    margin-left: 0;
+  }
+
+  .header .nav>ul {
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .header .nav li {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+  }
 }
 
 .header__background {
@@ -183,19 +236,6 @@ a {
   padding: 1rem;
 }
 
-@media only screen and (max-width:669px) {
-  .nav {
-    width: 100%;
-    margin: .96rem 0 0;
-  }
-
-  .nav li {
-    width: 33.33%;
-    text-align: center;
-    line-height: 1;
-  }
-}
-
 .nav a {
   text-decoration: none;
   border-bottom: 3px solid transparent;
@@ -216,17 +256,6 @@ a {
   width: 190px;
   height: 180px;
   position: relative;
-}
-
-@media only screen and (max-width:669px) {
-  .logo {
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: -2;
-  }
 }
 
 .logo span {
@@ -279,19 +308,6 @@ a {
   .content-box {
     padding: 1.344rem;
   }
-}
-
-.blog-summaries {
-  -webkit-columns: 300px 3;
-  -moz-columns: 300px 3;
-  columns: 300px 3;
-}
-
-.blog-summaries>article {
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  padding-bottom: 1rem;
 }
 
 .article-summary {
