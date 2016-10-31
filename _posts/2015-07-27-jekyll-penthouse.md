@@ -1,7 +1,6 @@
 ---
 title: "Jekyll and Critical Path CSS"
 excerpt: How I'm using Penthouse and Jekyll for my critical path CSS
-type: blog
 featured: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Sass"
 excerpt: My thoughts on Sass and how I'm using it in my projects.
-published: true
 type: blog
 ---
 

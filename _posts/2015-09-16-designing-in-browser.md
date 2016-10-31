@@ -1,7 +1,6 @@
 ---
 title: "Designing 'in the browser'"
 excerpt: Browsers are great for rapid prototyping, but I like to take a step back now and again.
-type: blog
 ---
 
 I've been hearing a lot of debate around ["Designing in the browser"](https://twitter.com/search?q=design%20in%20browser&src=typd) recently and I thought I'd write down some of my thoughts:

@@ -1,7 +1,6 @@
 ---
 title: The Diagonal Problem
 featured: true
-type: blog
 ---
 
 You may have noticed the diagonal lines in my current site design, I wanted to blog a little bit about them and how I got them to where they are now.

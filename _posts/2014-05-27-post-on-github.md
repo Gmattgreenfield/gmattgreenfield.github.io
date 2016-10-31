@@ -1,7 +1,6 @@
 ---
 title: "Git what..? Git who..? Github? O right, cool"
 description: A github and command line newbie talks through the learning curve and how its benefitted my work.
-published: true
 type: blog
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Responsive Menus in a CMS
-type: blog
 excerpt: My attempt at solving the problem of long site navigation menus on small screens.
 ---
 
