@@ -39,6 +39,13 @@ $header-animate-time: $animation-time-fast;
 	.nav {
 
 		float: right;
+
+		@media (max-width: 400px) {
+			> ul {
+				flex-wrap: wrap;
+			}
+		}
+
 		@media (max-width: 710px) {
 			float: none;
 			display: block;
@@ -70,4 +77,9 @@ $header-animate-time: $animation-time-fast;
 	right: -5px;
 
 	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+
+
+	@media (max-width: 400px) {
+		height: 130px;
+	}
 }

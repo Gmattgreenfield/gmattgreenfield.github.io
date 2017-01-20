@@ -78,28 +78,30 @@ footer {
 
 body:before,
 footer:before {
-  content: "";
   display: block;
   position: absolute;
   z-index: -1;
-  width: 100%;
   left: 0;
 }
 
 body:before {
-  background-color: #e6790e;
-  top: 0;
-  height: 20vh;
-  -webkit-transform: skewY(6deg);
-  transform: skewY(6deg);
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 200px 0;
+  border-color: transparent #e6790e transparent transparent;
+  top: 104px;
 }
 
 footer:before {
-  background-color: #1d6976;
-  top: -10vw;
-  height: 30vh;
-  -webkit-transform: skewY(173deg);
-  transform: skewY(173deg);
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 200px 100vw;
+  border-color: transparent transparent #1d6976;
+  top: -200px;
 }
 
 .page-content {
@@ -262,6 +264,13 @@ svg {
 
 .header .nav {
   float: right;
+}
+
+@media (max-width:400px) {
+  .header .nav>ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width:710px) {
